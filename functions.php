@@ -285,29 +285,14 @@ function mangoJuice_add_scripts() {
 
     // Register scripts
 
-    // Jquery plugins
-    wp_register_script('mangoJuice_jq_device', get_stylesheet_directory_uri() . '/jQueryPlugins/device.min.js', array(), "1.0.1", true);
-    wp_register_script('mangoJuice_jq_adaptive_backgrounds', get_stylesheet_directory_uri() . '/jQueryPlugins/jquery.adaptive-backgrounds.js', array(), "1.0.1", true);
-    wp_register_script('mangoJuice_jq_slick', get_stylesheet_directory_uri() . '/jQueryPlugins/slick.min.js', array(), "1.0.1", true);
-
-    wp_register_script('mangoJuice_mailchimp', get_stylesheet_directory_uri() . '/libs/mailchimp.login.js', array(), "1.0.1", true);
+    wp_register_script('mangoJuice_jq_device', get_stylesheet_directory_uri() . '/js/plugins/device.min.js', array(), "1.0.1", true);
+    wp_register_script('mangoJuice_mailchimp', get_stylesheet_directory_uri() . '/js/mailchimp.login.js', array(), "1.0.1", true);
     wp_register_script('mangoJuice_main-script', get_stylesheet_directory_uri() . '/js/main.js', array(), "1.0.1", true);
-    wp_register_script('mangoJuice_navigation_mobile', get_stylesheet_directory_uri() . "/js/navigation/mobile.js", array(), "0.0.1", true);
-    wp_register_script('mangoJuice_navigation_tablet', get_stylesheet_directory_uri() . "/js/navigation/tablet.js", array(), "0.0.1", true);
-    wp_register_script('mangoJuice_twitter_ajax', get_stylesheet_directory_uri() . "/js/twitter/ajax.js", array(), "1.0.1", true);
-    wp_register_script('mangoJuice_twitter_interaction', get_stylesheet_directory_uri() . "/js/twitter/controller.js", array(), "0.0.1", true);
 
     // Add scripts
     wp_enqueue_script( 'mangoJuice_jq_device');
-    wp_enqueue_script( 'mangoJuice_jq_adaptive_backgrounds' );
-    wp_enqueue_script( 'mangoJuice_jq_slick');
-
     wp_enqueue_script( 'mangoJuice_mailchimp');
     wp_enqueue_script( 'mangoJuice_main-script', false, array( 'jquery' ));
-    wp_enqueue_script( 'mangoJuice_navigation_mobile');
-    wp_enqueue_script( 'mangoJuice_navigation_tablet');
-    wp_enqueue_script( 'mangoJuice_twitter_ajax');
-    wp_enqueue_script( 'mangoJuice_twitter_controller');
 }
 
 //wp_enqueue_script( 'script-name', get_template_directory_uri() . '/js/example.js', array(), '1.0.0', true );
