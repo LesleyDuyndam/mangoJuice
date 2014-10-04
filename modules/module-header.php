@@ -1,6 +1,7 @@
 <?php
-/** The theme Header */
+/** The Theme Header */
 ?>
+
 <!DOCTYPE html>
 
 <!--[if IE 7]>
@@ -12,7 +13,6 @@
 <![endif]-->
     
 <!--[if !(IE 7) | !(IE 8)  ]><!-->
-
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 
@@ -26,31 +26,42 @@
     <?php wp_head(); ?>
 </head>
 
+<!-- START BODY -->
 <body id="body" <?php body_class(); ?>>
+
+    <!-- START HEADER -->
     <header id="header">
 
-        <nav id="main-menu">
+        <!-- START MAIN NAVIGATION -->
+        <nav id="main">
             <?php wp_nav_menu( array(
                 'theme_location' => 'primary',
             ));
             ?>
-        </nav>
+        </nav><!-- END MAIN NAVIGATION -->
 
-        <button id="multi-header">
-            <svg version="1.1"
-                 xmlns="http://www.w3.org/2000/svg">
+        <!-- START .MOBILE BUTTON -->
+        <button>
+
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+                <!-- START EXIT LINES -->
                 <g id="exit">
-                    <line stroke-miterlimit="10" x1="5" y1="30.342" x2="30" y2="4.843"/>
-                    <line stroke-miterlimit="10" x1="5" y1="4.98" x2="30" y2="30.355"/>
-                </g>
-                <g id="burger">
-                    <line stroke-miterlimit="5" x1="2" y1="27.5" x2="33" y2="27.5"/>
-                    <line stroke-miterlimit="5" x1="2" y1="17.5" x2="33" y2="17.5"/>
-                    <line stroke-miterlimit="5" x1="2" y1="7.5" x2="33" y2="7.5"/>
-                </g>
-            </svg>
-        </button>
-        <h1><a href="<?php echo get_home_url();?>">Lesley Duyndam</a></h1>
+                    <line x1="5" y1="30.342" x2="30" y2="4.843"></line>
+                    <line x1="5" y1="4.98" x2="30" y2="30.355"></line>
+                </g><!-- END EXIT LINES -->
 
+                <!-- START BURGER LINES -->
+                <g id="burger">
+                    <line x1="2" y1="27.5" x2="33" y2="27.5"></line>
+                    <line x1="2" y1="17.5" x2="33" y2="17.5"></line>
+                    <line x1="2" y1="7.5" x2="33" y2="7.5"></line>
+                </g><!-- END EXIT LINES -->
+
+            </svg>
+
+        </button><!-- END .MOBILE BUTTON -->
+
+        <h1><a href="<?php echo get_home_url();?>">Lesley Duyndam</a></h1>
 
     </header>

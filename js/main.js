@@ -10,7 +10,7 @@ if( device.mobile() ){
     var body    = jQuery('#body'),
         header  = jQuery('#header');
 
-    jQuery('header svg')
+    jQuery('header button')
         .click( function(){
             console.log("Knop geklikt!");
             darkBox = jQuery("#darker-back");

@@ -1,8 +1,15 @@
-<?php /** The cards template file */ ?>
-    <?php if (have_posts()) : ?>
-        <?php $count = 0;?>
+<?php
+/** The cards template file */
+?>
 
+<!-- START POSTS -->
+<section class="posts">
+    <?php  ;?>
+    <?php if (have_posts()) : ?>
+
+        <?php $count = 0;?>
         <?php while (have_posts()) : the_post(); ?>
+
             <?php $count++;?>
             <section class="post post-<?php echo $count;?>">
 
@@ -33,3 +40,4 @@
         <?php get_template_part( 'content', 'none' ); ?>
 
     <?php endif; ?>
+</section><!-- END POSTS -->
