@@ -23,7 +23,7 @@ get_header(); ?>
 		        <?php if(true) : ?>
 			        <a href="<?php echo "#" ;?>">Bekijk de live website!</a>
 		        <?php endif; ?>
-		        
+
 	        </footer>
 
 <!--        <section>-->
