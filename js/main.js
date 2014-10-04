@@ -5,34 +5,47 @@
  * @type {HTMLElement}
  */
 
-//jQuery(".portfolio").slick({
-//    centerMode: true,
-//    arrows: false,
-//    centerPadding: '150px',
-//    focusOnSelect: false,
-//    slidesToShow: 2,
-//    autoplay: true,
-//    autoplaySpeed: 5000,
-//    responsive: [
-//        {
-//            breakpoint: 1025,
-//            settings: {
-//                arrows: false,
-//                focusOnSelect: true,
-//                centerMode: true,
-//                centerPadding: '1%',
-//                slidesToShow: 2
-//            }
-//        },
-//        {
-//            breakpoint: 600,
-//            settings: {
-//                arrows: false,
-//                focusOnSelect: true,
-//                centerMode: true,
-//                centerPadding: '15%',
-//                slidesToShow: 1
-//            }
-//        }
-//    ]
-//});
+if( device.mobile() ){
+
+    var body    = jQuery('#body'),
+        header  = jQuery('#header');
+
+    jQuery('header svg')
+        .click( function(){
+            console.log("Knop geklikt!");
+            darkBox = jQuery("#darker-back");
+
+            if ( header.hasClass('active') ){
+
+                header.removeClass('active');
+                darkBox .remove();
+
+            } else {
+
+                header.addClass('active');
+                body    .append( jQuery('<div/>', { id: 'darker-back'} ));
+
+            }
+        });
+
+    // Zet scroll uit wanneer het menu actief is
+
+    console.log(body);
+
+    jQuery( window ).scroll(function(){
+
+        if( jQuery('#header').hasClass('active') ){
+
+            //console.log(body);
+            var style = {
+                position: 'fixed'
+                //top: '-' + body.context.body.scrollHeight + 'px'
+            };
+
+            body.css(style);
+        } else {
+            body.css('position', 'static');
+            //console.log('Er is gescrolld');
+        }
+    });
+}

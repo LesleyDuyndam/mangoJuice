@@ -1,7 +1,7 @@
 <?php /** The main template file */ ?>
 <?php get_header(); ?>
 
-<section id="intro">
+<section class="intro">
 
     <?php get_template_part( 'module', 'intro' ) ;?>
 

@@ -8,7 +8,7 @@
 
                 <header>
                     <?php echo get_the_post_thumbnail(); ?>
-                    <h3><?php the_title(); ?></h3>
+                    <h3 class="img-overlay"><?php the_title(); ?></h3>
                 </header>
 
                 <article>

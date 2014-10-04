@@ -18,14 +18,6 @@ function mangoJuice_setup() {
     // to output valid HTML5.
     add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list' ) );
 
-    /*
-    * This theme supports all available post formats by default.
-     * See http://codex.wordpress.org/Post_Formats
-     */
-    add_theme_support( 'post-formats', array(
-        'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video', 'portfolio'
-    ) );
-
     // This theme uses wp_nav_menu() in one location.
     register_nav_menu( 'primary', __( 'Navigation Menu', 'mangoJuice' ) );
 
@@ -96,7 +88,7 @@ function reverse_strrchr($haystack, $needle, $trail) {
 }
 
 /**
- * Registers two widget areas.
+ * Registers one widget area.
  */
 function mangoJuice_widgets_init() {
    register_sidebar( array(
@@ -109,17 +101,6 @@ function mangoJuice_widgets_init() {
         'before_title'  => '<h1>',
         'after_title'   => '</h1>',
    ) );
-
-    register_sidebar( array(
-        'name'          => 'Footer',
-        'id'            => "sidebar-2",
-        'description'   => 'Footer responsive sidebar',
-        'class'         => '',
-        'before_widget' => '<li>',
-        'after_widget'  => '</li>',
-        'before_title'  => '<h1>',
-        'after_title'   => '</h1>',
-    ) );
 }
 
 add_action( 'widgets_init', 'mangoJuice_widgets_init');
@@ -145,26 +126,6 @@ if ( ! function_exists( 'mangoJuice_paging_nav' ) ) :
                 <?php if ( get_previous_posts_link() ) : ?>
                     <?php previous_posts_link( __( 'Newer posts', 'mangoJuice' ) ); ?>
                 <?php endif; ?>
-    <?php
-    }
-endif;
-
-if ( ! function_exists( 'mangoJuice_post_nav' ) ) :
-    /**
-     * Displays navigation to next/previous post when applicable.
-     */
-    function mangoJuice_post_nav() {
-        global $post;
-
-        // Don't print empty markup if there's nowhere to navigate.
-        $previous = ( is_attachment() ) ? get_post( $post->post_parent ) : get_adjacent_post( false, '', true );
-        $next     = get_adjacent_post( false, '', false );
-
-        if ( ! $next && ! $previous )
-            return;
-        ?>
-                <?php previous_post_link( '%link', _x( '%title', 'Previous post link', 'mangoJuice' ) ); ?>
-                <?php next_post_link( '%link', _x( '%title', 'Next post link', 'mangoJuice' ) ); ?>
     <?php
     }
 endif;
@@ -285,29 +246,14 @@ function mangoJuice_add_scripts() {
 
     // Register scripts
 
-    // Jquery plugins
-    wp_register_script('mangoJuice_jq_device', get_stylesheet_directory_uri() . '/jQueryPlugins/device.min.js', array(), "1.0.1", true);
-    wp_register_script('mangoJuice_jq_adaptive_backgrounds', get_stylesheet_directory_uri() . '/jQueryPlugins/jquery.adaptive-backgrounds.js', array(), "1.0.1", true);
-    wp_register_script('mangoJuice_jq_slick', get_stylesheet_directory_uri() . '/jQueryPlugins/slick.min.js', array(), "1.0.1", true);
-
-    wp_register_script('mangoJuice_mailchimp', get_stylesheet_directory_uri() . '/libs/mailchimp.login.js', array(), "1.0.1", true);
+    wp_register_script('mangoJuice_jq_device', get_stylesheet_directory_uri() . '/js/plugins/device.min.js', array(), "1.0.1", true);
+    wp_register_script('mangoJuice_mailchimp', get_stylesheet_directory_uri() . '/js/mailchimp.login.js', array(), "1.0.1", true);
     wp_register_script('mangoJuice_main-script', get_stylesheet_directory_uri() . '/js/main.js', array(), "1.0.1", true);
-    wp_register_script('mangoJuice_navigation_mobile', get_stylesheet_directory_uri() . "/js/navigation/mobile.js", array(), "0.0.1", true);
-    wp_register_script('mangoJuice_navigation_tablet', get_stylesheet_directory_uri() . "/js/navigation/tablet.js", array(), "0.0.1", true);
-    wp_register_script('mangoJuice_twitter_ajax', get_stylesheet_directory_uri() . "/js/twitter/ajax.js", array(), "1.0.1", true);
-    wp_register_script('mangoJuice_twitter_interaction', get_stylesheet_directory_uri() . "/js/twitter/controller.js", array(), "0.0.1", true);
 
     // Add scripts
     wp_enqueue_script( 'mangoJuice_jq_device');
-    wp_enqueue_script( 'mangoJuice_jq_adaptive_backgrounds' );
-    wp_enqueue_script( 'mangoJuice_jq_slick');
-
     wp_enqueue_script( 'mangoJuice_mailchimp');
     wp_enqueue_script( 'mangoJuice_main-script', false, array( 'jquery' ));
-    wp_enqueue_script( 'mangoJuice_navigation_mobile');
-    wp_enqueue_script( 'mangoJuice_navigation_tablet');
-    wp_enqueue_script( 'mangoJuice_twitter_ajax');
-    wp_enqueue_script( 'mangoJuice_twitter_controller');
 }
 
 //wp_enqueue_script( 'script-name', get_template_directory_uri() . '/js/example.js', array(), '1.0.0', true );

@@ -2,8 +2,8 @@
 @import "helpers/mixin"
 
 // Partials
-@import "partials/base"
 @import "partials/reset"
+@import "partials/base"
 @import "partials/typography"
 @import "partials/buttons"
 @import "partials/figures"
@@ -13,11 +13,13 @@
 @import "module/header"
 @import "module/intro"
 @import "module/cards"
-@import "module/portfolioSingle"
-@import "module/slider"
 @import "module/footer"
 @import "module/pageNav"
 @import "module/keyValues"
+
+// Page overwrite the module
+@import "single"
+
 
 /*  COLOR BASIC SETUP
 body
