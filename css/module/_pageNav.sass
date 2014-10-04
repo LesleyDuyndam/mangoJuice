@@ -1,0 +1,15 @@
+// Post navigation blocks
+
+.post-nav
+
+  a
+    width: 70%
+    margin: 10px 0
+    &:first-child
+      @include button_large($secondary-1, $secondary-1_accent, none)
+      display: inline-block
+
+    &:nth-child(2)
+      @include button_large($secondary-2, $secondary-2_accent, none)
+      display: inline-block
+      text-align: right

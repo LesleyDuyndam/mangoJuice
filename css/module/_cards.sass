@@ -1,0 +1,42 @@
+.card
+  display: inline-block
+  width: 100%
+  margin: 15px 0 65px
+  padding: 0 0 25px
+  //border-bottom: 1px solid $secondary-2
+  box-shadow: $background
+
+  img
+    -webkit-filter: grayscale(20%)
+    -moz-filter: grayscale(20%)
+    -ms-filter: grayscale(20%)
+    -o-filter: grayscale(20%)
+    filter: grayscale(20%)
+
+  h3
+    @include img-title(92%)
+    font-size: 2.1em
+
+  h4
+    font-style: italic
+    font-size: 0.9em
+
+  p
+    margin-bottom: 25px
+
+  a
+    display: inline-block
+    vertical-align: middle
+    font-style: italic
+    font-size: 0.9em
+    padding-right: 20px
+
+  p, h4
+    padding: 15px 4% 0
+
+  footer
+    text-align: right
+
+  .post_more
+    @include button_medium($secondary-1, $secondary-1_accent, none)
+    font-style: normal

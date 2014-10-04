@@ -1,0 +1,139 @@
+object(stdClass)#95 (23) {
+    ["created_at"]=> string(30) "Mon Apr 15 18:22:37 +0000 2013"
+    ["id"]=> int(323863948380217345)
+    ["id_str"]=> string(18) "323863948380217345"
+    ["text"]=> string(55) "Weer lekker een avondje hobbyen! http://t.co/0b2V7lGj5J"
+    ["source"]=> string(84) "Twitter for Android"
+    ["truncated"]=> bool(false)
+    ["in_reply_to_status_id"]=> NULL
+    ["in_reply_to_status_id_str"]=> NULL
+    ["in_reply_to_user_id"]=> NULL
+    ["in_reply_to_user_id_str"]=> NULL
+    ["in_reply_to_screen_name"]=> NULL
+    ["user"]=> object(stdClass)#94 (40) {
+        ["id"]=> int(190177836)
+        ["id_str"]=> string(9) "190177836"
+        ["name"]=> string(14) "Lesley Duyndam"
+        ["screen_name"]=> string(13) "LesleyDuyndam"
+        ["location"]=> string(7) "Tilburg"
+        ["description"]=> string(95) "Adobe Illustrator | Wordpress | html5 | CSS3 | JavaScript | Studeert Co-iemes aan de Fontys ACI"
+        ["url"]=> string(22) "http://t.co/CTpeDj2N8U"
+        ["entities"]=> object(stdClass)#93 (2) {
+            ["url"]=> object(stdClass)#92 (1) {
+                ["urls"]=> array(1) {
+                    [0]=> object(stdClass)#91 (4) {
+                        ["url"]=> string(22) "http://t.co/CTpeDj2N8U"
+                        ["expanded_url"]=> string(27) "http://www.lesleyduyndam.nl"
+                        ["display_url"]=> string(16) "lesleyduyndam.nl"
+                        ["indices"]=> array(2) {
+                            [0]=> int(0)
+                            [1]=> int(22)
+                        }
+                    }
+                }
+            }
+            ["description"]=> object(stdClass)#90 (1) {
+                ["urls"]=> array(0) { }
+            }
+        }
+        ["protected"]=> bool(false)
+        ["followers_count"]=> int(102)
+        ["friends_count"]=> int(302)
+        ["listed_count"]=> int(2)
+        ["created_at"]=> string(30) "Mon Sep 13 08:21:36 +0000 2010"
+        ["favourites_count"]=> int(0)
+        ["utc_offset"]=> int(7200)
+        ["time_zone"]=> string(9) "Amsterdam"
+        ["geo_enabled"]=> bool(true) ["verified"]=> bool(false)
+        ["statuses_count"]=> int(113) ["lang"]=> string(2) "nl"
+        ["contributors_enabled"]=> bool(false)
+        ["is_translator"]=> bool(false)
+        ["is_translation_enabled"]=> bool(false)
+        ["profile_background_color"]=> string(6) "FFCC99"
+        ["profile_background_image_url"]=> string(78) "http://pbs.twimg.com/profile_background_images/378800000165787724/HPWG0bT8.png"
+        ["profile_background_image_url_https"]=> string(79) "https://pbs.twimg.com/profile_background_images/378800000165787724/HPWG0bT8.png"
+        ["profile_background_tile"]=> bool(true)
+        ["profile_image_url"]=> string(74) "http://pbs.twimg.com/profile_images/421663266369052672/_PeaBF9u_normal.png"
+        ["profile_image_url_https"]=> string(75) "https://pbs.twimg.com/profile_images/421663266369052672/_PeaBF9u_normal.png"
+        ["profile_banner_url"]=> string(58) "https://pbs.twimg.com/profile_banners/190177836/1389367370"
+        ["profile_link_color"]=> string(6) "3DBFBF"
+        ["profile_sidebar_border_color"]=> string(6) "CCCCCC"
+        ["profile_sidebar_fill_color"]=> string(6) "D9CCBF"
+        ["profile_text_color"]=> string(6) "E6CCB3"
+        ["profile_use_background_image"]=> bool(true)
+        ["default_profile"]=> bool(false)
+        ["default_profile_image"]=> bool(false)
+        ["following"]=> bool(false)
+        ["follow_request_sent"]=> bool(false)
+        ["notifications"]=> bool(false) }
+        ["geo"]=> NULL ["coordinates"]=> NULL
+        ["place"]=> NULL
+        ["contributors"]=> NULL
+        ["retweet_count"]=> int(0)
+        ["favorite_count"]=> int(0)
+        ["entities"]=> object(stdClass)#89 (5) {
+            ["hashtags"]=> array(0) { }
+            ["symbols"]=> array(0) { }
+            ["urls"]=> array(0) { }
+            ["user_mentions"]=> array(0) { }
+            ["media"]=> array(1) {
+                [0]=> object(stdClass)#88 (10) {
+                    ["id"]=> int(323863948384411648)
+                    ["id_str"]=> string(18) "323863948384411648"
+                    ["indices"]=> array(2) {
+                        [0]=> int(33)
+                        [1]=> int(55)
+                    }
+                    ["media_url"]=> string(46) "http://pbs.twimg.com/media/BH6Yi48CIAAeIKQ.jpg"
+                    ["media_url_https"]=> string(47) "https://pbs.twimg.com/media/BH6Yi48CIAAeIKQ.jpg"
+                    ["url"]=> string(22) "http://t.co/0b2V7lGj5J" ["display_url"]=> string(26) "pic.twitter.com/0b2V7lGj5J"
+                    ["expanded_url"]=> string(66) "http://twitter.com/LesleyDuyndam/status/323863948380217345/photo/1"
+                    ["type"]=> string(5) "photo"
+                    ["sizes"]=> object(stdClass)#87 (4) {
+                        ["medium"]=> object(stdClass)#86 (3) {
+                            ["w"]=> int(600)
+                            ["h"]=> int(450)
+                            ["resize"]=> string(3) "fit"
+                        }
+                        ["large"]=> object(stdClass)#85 (3) {
+                            ["w"]=> int(1024)
+                            ["h"]=> int(768)
+                            ["resize"]=> string(3) "fit"
+                        } ["thumb"]=> object(stdClass)#84 (3) {
+                            ["w"]=> int(150)
+                            ["h"]=> int(150)
+                            ["resize"]=> string(4) "crop"
+                        } ["small"]=> object(stdClass)#83 (3) {
+                            ["w"]=> int(340)
+                            ["h"]=> int(255)
+                            ["resize"]=> string(3) "fit"
+                            }
+                        }
+                    }
+                }
+            }
+            ["favorited"]=> bool(false)
+            ["retweeted"]=> bool(false)
+            ["possibly_sensitive"]=> bool(false)
+            ["lang"]=> string(2) "nl"
+        }
+    } 01
+
+tweet_data = {
+    text:        retweet.text != undefined ? retweet.text : tweet.text,
+    media:       tweet.entities.media[0].media_url,
+    time:        tweet.created_at,
+    name:        tweet.user.name,
+    screen_name: tweet.user.screen_name,
+    image:       tweet.user.profile_image_url,
+    cover:       tweet.user.profile_banner_url,
+    background:  tweet.user.profile_background_image_url,
+    retweet: {
+        time:        retweet.created_at,
+        name:        retweet.user.name,
+        screen_name: retweet.user.screen_name,
+        image:       retweet.user.profile_image_url,
+        cover:       retweet.user.profile_banner_url,
+        background:  retweet.user.profile_background_image_url
+    }
+};

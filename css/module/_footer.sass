@@ -1,0 +1,95 @@
+/* The footer styles */
+
+footer
+  section
+    padding: 60px $mobile-padding
+
+  h3
+    color: $primary-light
+    margin-bottom: 15px
+    font-size: 0.8em
+
+  #find-me
+    background-color: $secondary-1
+    ul
+      width: 100%
+
+    li
+      display: inline-block
+      width: 24%
+      padding: 1% 0
+      text-align: center
+      @include border-radius
+      overflow: hidden
+      background-color: $primary-light
+      @include transition( 0.2s ease)
+      @include border-bottom($secondary-1_accent)
+      &:hover
+        @include border-bottom($primary-light)
+
+    img
+      width: 50%
+      margin: 25%
+      height: auto
+
+  #talk-to-me
+    background-color: $secondary-2
+
+    img
+      display: inline-blok
+      vertical-align: top
+      width: 38%
+      margin-top: 12%
+
+    ul
+      font-family: $font-1
+      font-size: 0.7em
+      line-height: 1.7em
+      color: $primary-light
+      display: inline-block
+      width: 58%
+      padding-left: 2%
+      border-left: 1px solid $primary-dark
+
+    h4
+      font-family: $font-1
+      font-size: 1.5em
+
+    h5
+      font-size: 1em
+      font-family: $font-1
+      color: $primary-dark
+      font-style: italic
+      margin: 10px 0 0
+
+  #follow-me
+    background-color: $primary-dark
+
+    input
+      padding: 10px 3%
+      width: 94%
+      border: none
+
+    button
+      @include button_medium($secondary-1, $secondary-1_accent, none)
+      margin-top: 20px
+
+    .clear
+      text-align: center
+    div
+      &.mce_inline_error, &#mce-error-response
+        color: $secondary-2_accent
+        text-align: left
+        font-family: $font-2
+        margin: 15px 0
+        font-size: 0.7em
+        background-color: $primary-light
+        padding: 30px 15px 30px 105px
+        background-image: url("../svg/icons/exclamation8.svg")
+        background-repeat: no-repeat
+        background-size: 50px
+        background-position: 30px 50%
+
+      &#mce-succes-response
+        color: $primary-dark
+        background-image: url("../svg/icons/checkboxmark.svg")

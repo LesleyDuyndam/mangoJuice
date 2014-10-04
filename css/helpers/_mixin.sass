@@ -1,0 +1,70 @@
+/*  COLOR VARIABLES
+$primary-dark:        rgba(68,  63, 53, 1)
+$primary-light:       rgba(248, 248, 248, 1)
+
+$primary-light_accent:       rgba(208, 208, 208, 1)
+
+$secondary-1:         rgba(114, 160, 153, 1)
+$secondary-1_accent: rgb(66, 93, 89)
+
+$secondary-2:         rgba(194, 101, 89, 1)
+$secondary-2_accent:  rgba(149, 78, 68, 1)
+
+$accent:              rgba(118, 113, 103, 0.1)
+
+/* SHADOW VARIABLES
+$foreground:    0 0 20px rgba(68, 63, 53, 0.1)
+$background:    0 0 10px rgba(0, 0, 0, 0.2)
+
+$text-shadow:   1px 1px 0 rgba(0, 0, 0, 0.4)
+$text-light:    1px 1px 0 rgba(255, 255, 255, 0.5)
+
+/* PADDING SETUP
+
+$section-padding: 40% 0
+$mobile-padding: 4%
+
+
+//  BOTTOM LINE ON BUTTONS
+@mixin border-bottom( $color )
+  border-bottom: 10px solid $color
+
+@mixin border-radius
+  border-radius: 0
+
+// TRANSITION
+@mixin transition($transition)
+  -webkit-transition: $transition
+    -moz-transition: $transition
+      -ms-transition: $transition
+        -o-transition: $transition
+          transition: $transition
+
+// GRADIENT
+@mixin gradient($color1, $color2)
+  background: -moz-linear-gradient(top,  $color1 0%, $color2 100%) /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color1) color-stop(100%,$color2)) /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  $color1 0%,$color2 100%) /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  $color1 0%,$color2 100%) /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  $color1 0%,$color2 100%) /* IE10+ */
+  background: linear-gradient(to bottom,  $color1 0%,$color2 100%) /* W3C */
+
+// TITLE WITH GRADIENT BACKGROUND FOR IMAGES
+@mixin img-title($width)
+  position: absolute
+  margin-top: -84px
+  height: 40px
+  width: $width
+  padding: 25px 4% 15px
+  color: $primary-light
+  @include gradient(rgba(0,0,0,0), rgba(0,0,0,0.5))
+  text-shadow: $text-shadow
+
+/* SET RESPONSIVE BREAKPOINTS
+@mixin tablet
+  @media (min-width: 600px) and (max-width: 1025px)
+    @content
+
+@mixin desktop
+  @media (min-width: 1025px)
+    @content

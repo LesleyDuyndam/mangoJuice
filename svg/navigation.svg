@@ -1,0 +1,13 @@
+<svg version="1.1"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="exit">
+        <line display="inline" fill="none" stroke="#443F35" stroke-miterlimit="10" x1="5" y1="30.342" x2="30" y2="4.843"/>
+        <line display="inline" fill="none" stroke="#443F35" stroke-miterlimit="10" x1="5" y1="4.98" x2="30" y2="30.355"/>
+    </g>
+    <g id="burger">
+        <line fill="none" stroke="#443F35" stroke-miterlimit="5" x1="2" y1="27" x2="33" y2="27"/>
+        <line fill="none" stroke="#443F35" stroke-miterlimit="5" x1="2" y1="17" x2="33" y2="17"/>
+        <line fill="none" stroke="#443F35" stroke-miterlimit="5" x1="2" y1="7" x2="33" y2="7"/>
+    </g>
+</svg>
