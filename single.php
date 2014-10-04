@@ -1,6 +1,7 @@
 <?php /** The single template file */
 
-get_header(); ?>
+get_template_part( 'modules/module', 'header' ) ;?>
+
 <section class="single-post">
     <?php while (have_posts()) : the_post(); ?>
 	        <header>
@@ -32,11 +33,11 @@ get_header(); ?>
 
         <section class="page-nav">
 
-	        <?php get_template_part( 'module', 'pagenav' ) ;?>
+	        <?php get_template_part( 'snippets/snippet', 'pagenav' ) ;?>
 
         </section>
 
     <?php endwhile; ?>
 </section>
 
-<?php get_footer(); ?>
+<?php get_template_part( 'modules/module', 'footer' ) ;?>

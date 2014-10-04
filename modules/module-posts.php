@@ -4,7 +4,7 @@
 
         <?php while (have_posts()) : the_post(); ?>
             <?php $count++;?>
-            <section class="card card-<?php echo $count;?>">
+            <section class="post post-<?php echo $count;?>">
 
                 <header>
                     <?php echo get_the_post_thumbnail(); ?>

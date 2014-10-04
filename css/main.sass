@@ -1,21 +1,23 @@
-/* LOAD MODULES & PARTIALS
-@import "helpers/mixin"
+/* Assets, set up de document
+@import "assets/variables"
+@import "assets/mixin"
 
-// Partials
-@import "partials/reset"
-@import "partials/base"
-@import "partials/typography"
-@import "partials/buttons"
-@import "partials/figures"
-@import "partials/grids"
+// Root styles
+@import "root/reset"
+@import "root/grid"
+@import "root/base"
+@import "root/typography"
+@import "root/buttons"
 
-// UI
-@import "module/header"
-@import "module/intro"
-@import "module/cards"
-@import "module/footer"
-@import "module/pageNav"
-@import "module/keyValues"
+// Snippets
+@import "snippets/pageNav"
+
+// Modules
+@import "modules/header"
+@import "modules/intro"
+@import "modules/posts"
+@import "modules/footer"
+@import "modules/keyValues"
 
 // Page overwrite the module
 @import "single"
