@@ -17,7 +17,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php wp_title( '|', true, 'right' ); ?></title>
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.3.7/slick.css"/>
     <?php wp_enqueue_script("jquery"); ?>
     <?php wp_head(); ?>
 </head>

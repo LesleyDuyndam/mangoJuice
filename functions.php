@@ -30,14 +30,6 @@ function mangoJuice_setup() {
 
 
     /*
-     * Set image sizes
-     */
-    update_option('small_size_w', 300);
-    update_option('large_size_w', 1000);
-
-
-
-    /*
      * Adds RSS feed links to <head> for posts and comments.
      */
     add_theme_support( 'automatic-feed-links' );
@@ -49,13 +41,6 @@ function mangoJuice_setup() {
      * to output valid HTML5.
      */
     add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list' ) );
-
-
-
-    /*
-     * This theme uses wp_nav_menu() in one location.
-     */
-    register_nav_menu( 'primary', __( 'Navigation Menu', 'mangoJuice' ) );
 
 
 
@@ -74,6 +59,61 @@ function mangoJuice_setup() {
 // Fires after the theme is loaded.
 add_action( 'after_setup_theme', 'mangoJuice_setup' );
 
+
+
+
+
+
+
+
+
+
+/**
+ * Registers one widget area.
+ */
+function mangoJuice_widgets_init() {
+    register_sidebar( array(
+        'name'          => 'Main sidebar',
+        'id'            => "sidebar-1",
+        'description'   => 'Main responsive sidebar',
+        'class'         => '',
+        'before_widget' => '<li>',
+        'after_widget'  => '</li>',
+        'before_title'  => '<h1>',
+        'after_title'   => '</h1>',
+    ) );
+}
+
+add_action( 'widgets_init', 'mangoJuice_widgets_init');
+
+
+
+
+
+
+
+
+
+
+/*
+ * Set image sizes
+ */
+update_option('small_size_w', 300);
+update_option('large_size_w', 1000);
+
+
+
+
+
+
+
+
+
+
+/*
+ * This theme uses wp_nav_menu() in one location.
+ */
+register_nav_menu( 'primary', __( 'Navigation Menu', 'mangoJuice' ) );
 
 
 
@@ -142,33 +182,6 @@ function mangoJuice_excerpt( $length ) { // Max excerpt length. Length is set in
 
 
 
-/**
- * Registers one widget area.
- */
-function mangoJuice_widgets_init() {
-   register_sidebar( array(
-        'name'          => 'Main sidebar',
-        'id'            => "sidebar-1",
-        'description'   => 'Main responsive sidebar',
-        'class'         => '',
-        'before_widget' => '<li>',
-        'after_widget'  => '</li>',
-        'before_title'  => '<h1>',
-        'after_title'   => '</h1>',
-   ) );
-}
-
-add_action( 'widgets_init', 'mangoJuice_widgets_init');
-
-
-
-
-
-
-
-
-
-
 
 /**
  * Add theme controllers
@@ -176,67 +189,12 @@ add_action( 'widgets_init', 'mangoJuice_widgets_init');
 include_once "controllers/bread_crumb.php";
 
 
-
-
-
-
-
-
-
+/**
+ * Add scripts to the document
+ */
+include_once "controllers/add_scripts.php";
 
 /**
- * Add styles to document
+ * Add styles to the document
  */
-function mangoJuice_add_styles() {
-
-
-    // Register scripts
-    wp_register_style('mangoJuice_main-css', get_stylesheet_directory_uri()  . '/css/main.css');
-
-
-    // Add scripts
-    wp_enqueue_style('mangoJuice_main-css');
-
-
-}
-
-add_action( 'wp_enqueue_scripts', 'mangoJuice_add_styles' );
-
-
-
-
-
-
-
-
-
-
-/**
- * Add scripts to document
- */
-function mangoJuice_add_scripts() {
-
-
-    // Add Jquery
-    if ( ! is_admin() ) {
-
-        wp_enqueue_script( 'jquery' );
-
-    }
-
-
-    // Register scripts
-    wp_register_script('mangoJuice_jq_device', get_stylesheet_directory_uri() . '/js/plugins/device.min.js', array(), "1.0.1", true);
-    wp_register_script('mangoJuice_mailchimp', get_stylesheet_directory_uri() . '/js/mailchimp.login.js', array(), "1.0.1", true);
-    wp_register_script('mangoJuice_main-script', get_stylesheet_directory_uri() . '/js/main.js', array(), "1.0.1", true);
-
-
-    // Add scripts
-    wp_enqueue_script( 'mangoJuice_jq_device');
-    wp_enqueue_script( 'mangoJuice_mailchimp');
-    wp_enqueue_script( 'mangoJuice_main-script', false, array( 'jquery' ));
-
-
-}
-
-add_action( 'wp_enqueue_scripts', 'mangoJuice_add_scripts' );
+include_once "controllers/add_styles.php";
