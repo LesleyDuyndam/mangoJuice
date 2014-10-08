@@ -1,3 +1,4 @@
+<?php get_template_part( 'modules/module', 'header' ) ;?>
 <?php
 
 /**
@@ -11,8 +12,6 @@
  *
  */
 ?>
-
-<?php get_template_part( 'modules/module', 'header' ) ;?>
 
 <article id="intro">
     <?php get_template_part( 'modules/module', 'intro') ;?>

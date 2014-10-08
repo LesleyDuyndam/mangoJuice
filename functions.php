@@ -1,6 +1,11 @@
 <?php
 
+/**
+ * Set up some basic theme information which loads after the theme is loaded
+ */
 function mangoJuice_setup() {
+
+
 
     /*
      * Makes Twenty Thirteen available for translation.
@@ -10,67 +15,56 @@ function mangoJuice_setup() {
      * replace to change 'mangoJuice' to the name of your theme in all
      * template files.
      */
-
-
-
     load_theme_textdomain( 'mangoJuice', get_template_directory() . '/languages' );
 
 
 
-    // Adds RSS feed links to <head> for posts and comments.
-    add_theme_support( 'automatic-feed-links' );
-
-
-
-    // Switches default core markup for search form, comment form, and comments
-    // to output valid HTML5.
-    add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list' ) );
-
-
-
-    // This theme uses wp_nav_menu() in one location.
-    register_nav_menu( 'primary', __( 'Navigation Menu', 'mangoJuice' ) );
+    /*
+     * Add thumbnail support
+     */
+    if ( function_exists( 'add_theme_support' ) ) {
+        add_theme_support( 'post-thumbnails' );
+//    set_post_thumbnail_size( 800, 400, true );
+    }
 
 
 
     /*
-     * This theme supports all available post formats by default.
-     * See http://codex.wordpress.org/Post_Formats
+     * Adds RSS feed links to <head> for posts and comments.
      */
+    add_theme_support( 'automatic-feed-links' );
 
 
 
-//    add_theme_support( 'post-formats', array(
+    /*
+     * Switches default core markup for search form, comment form, and comments
+     * to output valid HTML5.
+     */
+    add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list' ) );
+
+
+
+    /*
+     * This theme uses wp_nav_menu() in one location.
+     */
+//    register_nav_menu( 'primary', __( 'Navigation Menu', 'mangoJuice' ) );
+
+
+
+    /*
+    * Add support for different post-formats
+    * 'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video'
+    */
+    add_theme_support( 'post-formats', array(
 //        'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video'
-//    ) );
+    ) );
+
+
 
 }
 
+// Fires after the theme is loaded.
 add_action( 'after_setup_theme', 'mangoJuice_setup' );
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**
- * Add thumbnail support
- */
-if ( function_exists( 'add_theme_support' ) ) {
-    add_theme_support( 'post-thumbnails' );
-//    set_post_thumbnail_size( 800, 400, true );
-}
-
-
-
-
 
 
 
@@ -96,14 +90,11 @@ update_option('large_size_w', 1000);
 
 
 
-
-
-
-
-
-
-
-// Variable & intelligent excerpt length.
+/**
+ * Get the excerpt ( max character count )
+ *
+ * @param $length
+ */
 function mangoJuice_excerpt( $length ) { // Max excerpt length. Length is set in characters
 
 
@@ -158,11 +149,6 @@ function mangoJuice_excerpt( $length ) { // Max excerpt length. Length is set in
 
 
 
-
-
-
-
-
 /**
  * Registers one widget area.
  */
@@ -190,171 +176,15 @@ add_action( 'widgets_init', 'mangoJuice_widgets_init');
 
 
 
-
-////if ( ! function_exists( 'mangoJuice_paging_nav' ) ) :
-//    /**
-//     * Displays navigation to next/previous set of posts when applicable.
-//     */
-//    function mangoJuice_paging_nav() {
-//        global $wp_query;
-//
-//        // Don't print empty markup if there's only one page.
-//        if ( $wp_query->max_num_pages < 2 )
-//            return;
-//        ?>
-<!--                --><?php //if ( get_next_posts_link() ) : ?>
-<!--                    --><?php //next_posts_link( __( 'Older posts', 'mangoJuice' ) ); ?>
-<!--                --><?php //endif; ?>
-<!---->
-<!--                --><?php //if ( get_previous_posts_link() ) : ?>
-<!--                    --><?php //previous_posts_link( __( 'Newer posts', 'mangoJuice' ) ); ?>
-<!--                --><?php //endif; ?>
-<!--    --><?php
-//    }
-////endif;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//if ( ! function_exists( 'mangoJuice_entry_meta' ) ) :
-//    /**
-//     * Prints HTML with meta information for current post: categories, tags, permalink, author, and date.
-//     *
-//     * Create your own mangoJuice_entry_meta() to override in a child theme.
-//     *
-//     * @return void
-//     */
-//    function mangoJuice_entry_meta() {
-//        if ( is_sticky() && is_home() && ! is_paged() )
-//            echo '<span class="featured-post">' . __( 'Sticky', 'mangoJuice' ) . '</span>';
-//
-//        if ( ! has_post_format( 'link' ) && 'post' == get_post_type() )
-//            mangoJuice_entry_date();
-//
-//        // Translators: used between list items, there is a space after the comma.
-//        $categories_list = get_the_category_list( __( ', ', 'mangoJuice' ) );
-//        if ( $categories_list ) {
-//            echo '<span class="categories-links">' . $categories_list . '</span>';
-//        }
-//
-//        // Translators: used between list items, there is a space after the comma.
-//        $tag_list = get_the_tag_list( '', __( ', ', 'mangoJuice' ) );
-//        if ( $tag_list ) {
-//            echo '<span class="tags-links">' . $tag_list . '</span>';
-//        }
-//
-//        // Post author
-//        if ( 'post' == get_post_type() ) {
-//            printf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
-//                esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-//                esc_attr( sprintf( __( 'View all posts by %s', 'mangoJuice' ), get_the_author() ) ),
-//                get_the_author()
-//            );
-//        }
-//    }
-//endif;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//if ( ! function_exists( 'mangoJuice_entry_date' ) ) :
-//    /**
-//     * Prints HTML with date information for current post.
-//     *
-//     * Create your own mangoJuice_entry_date() to override in a child theme.
-//     *
-//     * @since Twenty Thirteen 1.0
-//     *
-//     * @param boolean $echo Whether to echo the date. Default true.
-//     * @return string The HTML-formatted post date.
-//     */
-//    function mangoJuice_entry_date( $echo = true ) {
-//        if ( has_post_format( array( 'chat', 'status' ) ) )
-//            $format_prefix = _x( '%1$s on %2$s', '1: post format name. 2: date', 'mangoJuice' );
-//        else
-//            $format_prefix = '%2$s';
-//
-//        $date = sprintf( '<span class="date"><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a></span>',
-//            esc_url( get_permalink() ),
-//            esc_attr( sprintf( __( 'Permalink to %s', 'mangoJuice' ), the_title_attribute( 'echo=0' ) ) ),
-//            esc_attr( get_the_date( 'c' ) ),
-//            esc_html( sprintf( $format_prefix, get_post_format_string( get_post_format() ), get_the_date() ) )
-//        );
-//
-//        if ( $echo )
-//            echo $date;
-//
-//        return $date;
-//    }
-//endif;
-
-
-
-
-
-
-
-
-
-
-//
-///**
-// * Returns the URL from the post.
-// *
-// * @uses get_url_in_content() to get the URL in the post meta (if it exists) or
-// * the first link found in the post content.
-// *
-// * Falls back to the post permalink if no URL is found in the post.
-// *
-// * @since Twenty Thirteen 1.0
-// *
-// * @return string The Link format URL.
-// */
-//function mangoJuice_get_link_url() {
-//    $content = get_the_content();
-//    $has_url = get_url_in_content( $content );
-//
-//    return ( $has_url ) ? $has_url : apply_filters( 'the_permalink', get_permalink() );
-//}
-//
-
-
-
-
-
-
-
-
-
-
-
+/**
+ * @param string $args
+ * @return string
+ */
 function mangoJuice_wp_nav_menu_args( $args = '' ) {
     $args['container'] = false;
     return $args;
 }
 add_filter( 'wp_nav_menu_args', 'mangoJuice_wp_nav_menu_args' );
-
-
 
 
 
@@ -379,15 +209,9 @@ include_once "controllers/bread_crumb.php";
 
 
 
-
-
-
-
-
 /**
- * Add styles and scripts
+ * Add styles to document
  */
-
 function mangoJuice_add_styles() {
 
 
@@ -412,8 +236,9 @@ add_action( 'wp_enqueue_scripts', 'mangoJuice_add_styles' );
 
 
 
-
-
+/**
+ * Add scripts to document
+ */
 function mangoJuice_add_scripts() {
 
 
@@ -438,7 +263,5 @@ function mangoJuice_add_scripts() {
 
 
 }
-
-//wp_enqueue_script( 'script-name', get_template_directory_uri() . '/js/example.js', array(), '1.0.0', true );
 
 add_action( 'wp_enqueue_scripts', 'mangoJuice_add_scripts' );

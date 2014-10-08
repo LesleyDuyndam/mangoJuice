@@ -1,4 +1,4 @@
-<?php /** The page template file */
+<?php
 
 get_template_part( 'modules/module', 'header' );
 

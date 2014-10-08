@@ -1,7 +1,3 @@
-<?php
-/** The Theme Header */
-?>
-
 <!DOCTYPE html>
 
 <!--[if IE 7]>
