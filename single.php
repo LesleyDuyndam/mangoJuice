@@ -6,6 +6,9 @@ get_template_part( 'modules/module', 'header' );
 
     get_template_part( 'snippets/snippet', 'bread_crumb'); ?>
 
+        <section>
+            Dit is slechts om Github name change te controleren
+        </section>
         <section class="single-post">
 	        <header>
 
