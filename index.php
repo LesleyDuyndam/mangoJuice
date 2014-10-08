@@ -14,9 +14,9 @@
 
 <?php get_template_part( 'modules/module', 'header' ) ;?>
 
-<!--<article id="intro">-->
-<!--    --><?php //mangoJuice_get_module( 'intro', false ) ;?>
-<!--</article>-->
+<article id="intro">
+    <?php get_template_part( 'modules/module', 'intro') ;?>
+</article>
 
 <article id="posts">
     <h2>Portfolio</h2>
