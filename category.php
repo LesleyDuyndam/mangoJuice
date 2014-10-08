@@ -1,10 +1,22 @@
-<?php get_template_part( 'modules/module', 'header' ); ?>
+<?php get_template_part( 'modules/module', 'header' );
 
-    <section class="posts">
+if ( have_posts() ){
+    get_template_part( 'snippets/snippet', 'bread_crumb');
+?>
 
-        <h2>Portfolio</h2>
-        <?php get_template_part( 'modules/module', 'posts' ); ?>
+<article id="posts">
+    <h2><?php echo single_cat_title( '', false ) ?></h2>
 
-    </section>
+    <?php
+    while ( have_posts() ) : the_post();
 
-<?php get_template_part( 'modules/module', 'footer' ); ?>
+        get_template_part( 'modules/module', 'posts');
+
+    endwhile;
+?>
+    </article>
+<?php
+
+}
+
+get_template_part( 'modules/module', 'footer' );

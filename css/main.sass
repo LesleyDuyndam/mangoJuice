@@ -1,35 +1,75 @@
-/* Assets, set up de document
-@import "assets/variables"
-@import "assets/mixin"
+///* Assets, set up de document
+//@import "assets/variables"
+//@import "assets/mixin"
+//
+//// Root styles
+//@import "root/reset"
+//@import "root/grid"
+//@import "root/base"
+//@import "root/typography"
+//@import "root/buttons"
+//
+//// Snippets
+//@import "snippets/pageNav"
+//
+//// Modules
+//@import "modules/header"
+//@import "modules/intro"
+//@import "modules/posts"
+//@import "modules/footer"
+//@import "modules/promises"
+//
+//// Page overwrite the module
+//@import "single"
+//
+//
+///*  COLOR BASIC SETUP
+//body
+//  background-color: $primary-light
+//  color: $primary-dark
+//
+//  a
+//    color: $primary-dark
+//
+//  p a
+//    color: $secondary-1
 
-// Root styles
-@import "root/reset"
-@import "root/grid"
-@import "root/base"
-@import "root/typography"
-@import "root/buttons"
+*
+  //margin: 5px
+  padding: 10px
+  list-style: none
+  text-decoration: none
+  border: solid 3px rgba(0, 0, 0, 0.2)
 
-// Snippets
-@import "snippets/pageNav"
+img
+  margin: 0
+  padding: 0
+  max-width: 100%
+  height: auto
+  border: dotted 5px rgba(255, 50, 100, 1)
 
-// Modules
-@import "modules/header"
-@import "modules/intro"
-@import "modules/posts"
-@import "modules/footer"
-@import "modules/keyValues"
-
-// Page overwrite the module
-@import "single"
-
-
-/*  COLOR BASIC SETUP
 body
-  background-color: $primary-light
-  color: $primary-dark
+  border: solid 5px rgba(100, 100, 255, 1)
 
-  a
-    color: $primary-dark
+header, footer
+  border: solid 5px rgba(100, 255, 255, 1)
 
-  p a
-    color: $secondary-1
+article
+  border: solid 3px rgb(255, 31, 43)
+
+h1, h2, h3, h4, h5, h6
+  border: dashed 3px rgb(40, 255, 61)
+
+a
+  border: double 3px rgba(255, 51, 20, 1)
+
+p
+  border: dashed 3px rgb(136, 224, 255)
+
+span
+  border: dashed 3px rgb(0, 106, 255)
+
+
+.bread-crumbs
+  div
+    display: inline-block

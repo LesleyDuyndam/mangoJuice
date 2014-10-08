@@ -12,20 +12,53 @@
  */
 ?>
 
-<!-- Load module: HEADER -->
-<?PHP get_template_part( 'modules/module', 'header' ) ;?>
+<?php get_template_part( 'modules/module', 'header' ) ;?>
 
-<!-- Load module: INTRO -->
-<?php get_template_part( 'modules/module', 'intro' ) ;?>
+<!--<article id="intro">-->
+<!--    --><?php //mangoJuice_get_module( 'intro', false ) ;?>
+<!--</article>-->
 
-<h2>Portfolio</h2>
-<a href="<?php mj_get_category_uri_slug( 'portfolio' ) ;?>" class="more">Meer..</a>
+<article id="posts">
+    <h2>Portfolio</h2>
+    <a href="<?php echo mangoJuice_get_category_uri_slug( 'portfolio' ) ;?>" class="more">Meer..</a>
+    <?php
+        //  Get the posts Query
+        $my_query = new WP_Query( 'category_name=portfolio&posts_per_page=3' );
+        //  Initialize a counter
+        $count = 0;
 
-<!-- Load module: POSTS -->
-<?php get_template_part( 'modules/module', 'posts' ); ?>
+        //  Loop trough the post query
+        while ( $my_query->have_posts() ) : $my_query->the_post();
 
-<!-- Load module: KEYALUES -->
-<?php get_template_part( 'modules/module', 'keyvalues' );?>
+            //  Update the counter
+            $count++;
 
-<!-- Load module: FOOTER -->
+            //  Print the post data in the preset format
+            get_template_part( 'modules/module', 'posts');
+
+        endwhile
+    ;?>
+</article>
+
+<article id="tijdelijk">
+    <h2>Mijn 3 beloftes:</h2>
+    <?php
+    //  Get the posts Query
+    $my_query = new WP_Query( 'category_name=beloftes&posts_per_page=3' );
+    //  Initialize a counter
+    $count = 0;
+
+    //  Loop trough the post query
+    while ( $my_query->have_posts() ) : $my_query->the_post();
+
+        //  Update the counter
+        $count++;
+
+        //  Print the post data in the preset format
+        get_template_part( 'modules/module', 'posts');
+
+    endwhile
+    ;?>
+</article>
+
 <?php get_template_part( 'modules/module', 'footer' ) ;?>

@@ -1,23 +1,31 @@
-<?php /** The main template file */
+<?php /** The page template file */
 
-get_header(); ?>
+get_template_part( 'modules/module', 'header' );
 
+while (have_posts()) : the_post();
 
-<?php while (have_posts()) : the_post(); ?>
-    <?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
+    get_template_part( 'snippets/snippet', 'bread_crumb'); ?>
+
+    <section class="page">
+    <header>
+        <?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
             <?php the_post_thumbnail(); ?>
-    <?php endif; ?>
-    <?php the_title(); ?>
-    <?php the_content(); ?>
-    <?php wp_link_pages(array(
-        'before' => '<div> Pages',
-        'after' => '</div',
-        'link_before' => '<span>',
-        'link_after' => '</span'
-        ));?>
-    <?php edit_post_link('Edit', '<span>', '</span');?>
-    <?php comments_template();?>
-<?php endwhile; ?>
+        <?php endif; ?>
+        <h3 class="img-overlay"><?php the_title(); ?></h3>
 
-<?php get_sidebar(''); ?>
-<?php get_footer(); ?>
+    </header>
+
+    <article>
+        <?php the_content() ;?>
+
+    </article>
+
+    <footer>
+
+
+    </footer>
+
+<?php endwhile; ?>
+</section>
+
+<?php get_template_part( 'modules/module', 'footer' ) ;?>

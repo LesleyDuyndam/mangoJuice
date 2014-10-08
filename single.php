@@ -1,9 +1,12 @@
 <?php /** The single template file */
 
-get_template_part( 'modules/module', 'header' ) ;?>
+get_template_part( 'modules/module', 'header' );
 
-<section class="single-post">
-    <?php while (have_posts()) : the_post(); ?>
+    while (have_posts()) : the_post();
+
+    get_template_part( 'snippets/snippet', 'bread_crumb'); ?>
+
+        <section class="single-post">
 	        <header>
 
 		        <?php echo get_the_post_thumbnail(); ?>
@@ -33,7 +36,7 @@ get_template_part( 'modules/module', 'header' ) ;?>
 
         <section class="page-nav">
 
-	        <?php get_template_part( 'snippets/snippet', 'pagenav' ) ;?>
+	        <?php get_template_part( 'snippets/snippet', 'page_navigation' ) ;?>
 
         </section>
 

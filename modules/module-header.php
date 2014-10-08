@@ -32,36 +32,38 @@
     <!-- START HEADER -->
     <header id="header">
 
-        <!-- START MAIN NAVIGATION -->
-        <nav id="main">
-            <?php wp_nav_menu( array(
-                'theme_location' => 'primary',
-            ));
-            ?>
-        </nav><!-- END MAIN NAVIGATION -->
+        <nav role="navigation">
+            <h1><a href="<?php echo get_home_url();?>">Lesley Duyndam</a></h1>
 
-        <!-- START .MOBILE BUTTON -->
-        <button>
+            <!-- START MAIN NAVIGATION -->
+                <?php
+                    wp_nav_menu( array(
+                        'theme_location' => 'primary',
+                        'container' => false
+                    ));
+                ?><!-- END MAIN NAVIGATION -->
 
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <!-- START .MOBILE BUTTON -->
+            <button>
 
-                <!-- START EXIT LINES -->
-                <g id="exit">
-                    <line x1="5" y1="30.342" x2="30" y2="4.843"></line>
-                    <line x1="5" y1="4.98" x2="30" y2="30.355"></line>
-                </g><!-- END EXIT LINES -->
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
 
-                <!-- START BURGER LINES -->
-                <g id="burger">
-                    <line x1="2" y1="27.5" x2="33" y2="27.5"></line>
-                    <line x1="2" y1="17.5" x2="33" y2="17.5"></line>
-                    <line x1="2" y1="7.5" x2="33" y2="7.5"></line>
-                </g><!-- END EXIT LINES -->
+                    <!-- START EXIT LINES -->
+                    <g id="exit">
+                        <line x1="5" y1="30.342" x2="30" y2="4.843"></line>
+                        <line x1="5" y1="4.98" x2="30" y2="30.355"></line>
+                    </g><!-- END EXIT LINES -->
 
-            </svg>
+                    <!-- START BURGER LINES -->
+                    <g id="burger">
+                        <line x1="2" y1="27.5" x2="33" y2="27.5"></line>
+                        <line x1="2" y1="17.5" x2="33" y2="17.5"></line>
+                        <line x1="2" y1="7.5" x2="33" y2="7.5"></line>
+                    </g><!-- END EXIT LINES -->
 
-        </button><!-- END .MOBILE BUTTON -->
+                </svg>
 
-        <h1><a href="<?php echo get_home_url();?>">Lesley Duyndam</a></h1>
+            </button><!-- END .MOBILE BUTTON -->
+        </nav>
 
     </header>
