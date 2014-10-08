@@ -22,7 +22,11 @@
             <?php get_template_part( 'content', get_post_format() ); ?>
         <?php endwhile; ?>
 
-    <?php mangoJuice_paging_nav(); ?>
+    <section class="page-nav">
+
+        <?php get_template_part( 'snippets/snippet', 'page_navigation' ) ;?>
+
+    </section>
 
     <?php else : ?>
         <?php get_template_part( 'content', 'none' ); ?>

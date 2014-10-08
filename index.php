@@ -20,7 +20,7 @@
 
 <article id="posts">
     <h2>Portfolio</h2>
-    <a href="<?php echo mangoJuice_get_category_uri_slug( 'portfolio' ) ;?>" class="more">Meer..</a>
+    <a href="<?php echo esc_url(get_category_link(get_cat_ID( 'portfolio' ))) ;?>" class="more">Meer..</a>
     <?php
         //  Get the posts Query
         $my_query = new WP_Query( 'category_name=portfolio&posts_per_page=3' );

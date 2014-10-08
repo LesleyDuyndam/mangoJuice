@@ -15,7 +15,7 @@
             </header>
 
             <article>
-                <?php mj_print_excerpt(300); ?>
+                <?php mangoJuice_excerpt(300); ?>
             </article>
 
             <footer>
