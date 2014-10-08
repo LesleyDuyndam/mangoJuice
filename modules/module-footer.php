@@ -1,6 +1,14 @@
 <?php /** The footer template */?>
 
 <footer id="footer">
+
+    <!-- START FOOTER NAVIGATION -->
+    <?php
+
+    wp_nav_menu( 'Footer' );
+
+    ?><!-- END FOOTER NAVIGATION -->
+
     <section id="find-me">
         <h3>Vind mij op</h3>
         <ul>

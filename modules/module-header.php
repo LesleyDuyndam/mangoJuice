@@ -33,7 +33,7 @@
             <!-- START MAIN NAVIGATION -->
                 <?php
                     wp_nav_menu( array(
-                        'theme_location' => 'primary',
+                        'theme_location' => 'Main',
                         'container' => false
                     ));
                 ?><!-- END MAIN NAVIGATION -->

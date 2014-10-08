@@ -69,51 +69,10 @@ add_action( 'after_setup_theme', 'mangoJuice_setup' );
 
 
 /**
- * Registers one widget area.
- */
-function mangoJuice_widgets_init() {
-    register_sidebar( array(
-        'name'          => 'Main sidebar',
-        'id'            => "sidebar-1",
-        'description'   => 'Main responsive sidebar',
-        'class'         => '',
-        'before_widget' => '<li>',
-        'after_widget'  => '</li>',
-        'before_title'  => '<h1>',
-        'after_title'   => '</h1>',
-    ) );
-}
-
-add_action( 'widgets_init', 'mangoJuice_widgets_init');
-
-
-
-
-
-
-
-
-
-
-/*
  * Set image sizes
  */
 update_option('small_size_w', 300);
 update_option('large_size_w', 1000);
-
-
-
-
-
-
-
-
-
-
-/*
- * This theme uses wp_nav_menu() in one location.
- */
-register_nav_menu( 'primary', __( 'Navigation Menu', 'mangoJuice' ) );
 
 
 
@@ -174,14 +133,11 @@ function mangoJuice_excerpt( $length ) { // Max excerpt length. Length is set in
 }
 
 
-
-
-
-
-
-
-
-
+/**
+ * Register menu's and sidebar's
+ */
+include_once "functions/register/menus.php";
+include_once "functions/register/sidebars.php";
 
 /**
  * Add theme controllers
@@ -193,6 +149,7 @@ include_once "controllers/bread_crumb.php";
  * Add scripts to the document
  */
 include_once "controllers/add_scripts.php";
+
 
 /**
  * Add styles to the document
