@@ -30,9 +30,9 @@ get_template_part( 'modules/module', 'header' );
 
 	        </footer>
 
-<!--        <section>-->
-<!--            --><?php //comments_template(); ?>
-<!--        </section>-->
+        <section>
+            <?php comments_template(); ?>
+        </section>
 
         <section class="page-nav">
 
