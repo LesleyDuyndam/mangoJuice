@@ -30,6 +30,14 @@ function mangoJuice_setup() {
 
 
     /*
+     * Set image sizes
+     */
+    update_option('small_size_w', 300);
+    update_option('large_size_w', 1000);
+
+
+
+    /*
      * Adds RSS feed links to <head> for posts and comments.
      */
     add_theme_support( 'automatic-feed-links' );
@@ -47,7 +55,7 @@ function mangoJuice_setup() {
     /*
      * This theme uses wp_nav_menu() in one location.
      */
-//    register_nav_menu( 'primary', __( 'Navigation Menu', 'mangoJuice' ) );
+    register_nav_menu( 'primary', __( 'Navigation Menu', 'mangoJuice' ) );
 
 
 
@@ -65,21 +73,6 @@ function mangoJuice_setup() {
 
 // Fires after the theme is loaded.
 add_action( 'after_setup_theme', 'mangoJuice_setup' );
-
-
-
-
-
-
-
-
-
-
-/**
- * Set image sizes
- */
-update_option('small_size_w', 300);
-update_option('large_size_w', 1000);
 
 
 
@@ -167,24 +160,6 @@ function mangoJuice_widgets_init() {
 
 add_action( 'widgets_init', 'mangoJuice_widgets_init');
 
-
-
-
-
-
-
-
-
-
-/**
- * @param string $args
- * @return string
- */
-function mangoJuice_wp_nav_menu_args( $args = '' ) {
-    $args['container'] = false;
-    return $args;
-}
-add_filter( 'wp_nav_menu_args', 'mangoJuice_wp_nav_menu_args' );
 
 
 
