@@ -8,11 +8,12 @@
 if (! function_exists( 'mangoJuice_register_nav_menus' )){
 
     function mangoJuice_register__nav_menus(){
-        register_nav_menus( array(
-            "Main",
-            "Aside",
-            "Footer"
-        ));
+
+        register_nav_menu('main', 'Main navigation menu');
+//
+//        register_nav_menus( array(
+//            "Main"
+//        ));
     };
 
     mangoJuice_register__nav_menus();

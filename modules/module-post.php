@@ -2,10 +2,10 @@
 /** The posts template file */
 ?>
 
-<section class="promise promise-<?php echo $count;?>">
+<section class="post promise-<?php echo $count;?>">
 
     <header>
-        <?php echo get_the_post_thumbnail(); ?>
+        <?php the_post_thumbnail(); ?>
         <h3 class="img-overlay"><?php the_title(); ?></h3>
     </header>
 

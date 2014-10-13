@@ -15,7 +15,12 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php wp_title( '|', true, 'right' ); ?></title>
+    <title>
+        <?php
+            wp_title( '|', true, 'right' );
+            bloginfo('name');
+        ?>
+    </title>
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <?php wp_enqueue_script("jquery"); ?>
     <?php wp_head(); ?>
@@ -28,7 +33,7 @@
     <header id="header">
 
         <nav role="navigation">
-            <h1><a href="<?php echo get_home_url();?>">Lesley Duyndam</a></h1>
+            <h1><a href="<?php echo get_home_url();?>"><?php bloginfo('name'); ?></a></h1>
 
             <!-- START MAIN NAVIGATION -->
                 <?php
