@@ -15,10 +15,31 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php
+
+    <title>
+        <?php
             wp_title( '|', true, 'right' );
-            bloginfo('name');
-        ?></title>
+            bloginfo('name');?>
+    </title>
+
+    <?php
+
+    $the_description = get_bloginfo('description');
+
+    if( is_single() ){
+        $the_description = get_the_excerpt();
+//            echo "<meta name='Description' content='" . get_the_excerpt() . "'>";
+    }
+
+    if( is_category() ){
+        $the_description = category_description();
+//            echo "<meta name='Description' content='" . category_description() . "'/>";
+    };
+
+    echo "<meta name='Description' content='" . $the_description . "'/>";
+
+    ?>
+
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
     <?php wp_head(); ?>

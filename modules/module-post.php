@@ -6,11 +6,11 @@
 
     <header>
         <?php the_post_thumbnail(); ?>
-        <h3 class="img-overlay"><?php the_title(); ?></h3>
+        <h4 class="img-overlay"><?php the_title(); ?></h4>
     </header>
 
     <article>
-        <?php mangoJuice_excerpt( 300 ); ?>
+        <?php the_excerpt(); ?>
     </article>
 
     <footer>

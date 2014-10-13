@@ -6,7 +6,7 @@ if ( have_posts() ){
 
 
 <section id="posts">
-    <h2><?php echo single_cat_title( '', false ) ?></h2>
+    <h3><?php single_cat_title( '', true ) ?></h3>
 
     <?php
 
@@ -14,7 +14,7 @@ if ( have_posts() ){
 
     while ( have_posts() ) : the_post();
 
-        get_template_part( 'modules/module', 'post');
+        get_template_part( 'modules/development', 'post');
 
     endwhile;
 ?>

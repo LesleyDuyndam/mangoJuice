@@ -18,7 +18,7 @@
 </section>
 
 <section id="posts">
-    <h2>Portfolio</h2>
+    <h3>Portfolio</h3>
     <a href="<?php echo esc_url(get_category_link(get_cat_ID( 'portfolio' ))) ;?>" class="more">Meer..</a>
     <?php
         //  Get the posts Query
@@ -40,7 +40,7 @@
 </section>
 
 <section id="tijdelijk">
-    <h2>Mijn 3 beloftes:</h2>
+    <h3>Mijn 3 beloftes:</h3>
     <?php
     //  Get the posts Query
     $my_query = new WP_Query( 'category_name=beloftes&posts_per_page=3' );
