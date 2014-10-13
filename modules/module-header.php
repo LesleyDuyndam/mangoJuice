@@ -15,14 +15,12 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>
-        <?php
+    <title><?php
             wp_title( '|', true, 'right' );
             bloginfo('name');
-        ?>
-    </title>
+        ?></title>
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-    <?php wp_enqueue_script("jquery"); ?>
+
     <?php wp_head(); ?>
 </head>
 
@@ -34,6 +32,7 @@
 
         <nav role="navigation">
             <h1><a href="<?php echo get_home_url();?>"><?php bloginfo('name'); ?></a></h1>
+            <h2><?php bloginfo('description'); ?></h2>
 
             <!-- START MAIN NAVIGATION -->
                 <?php

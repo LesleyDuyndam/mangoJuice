@@ -19,10 +19,10 @@ wp_register_script('mangoJuice_mailchimp', get_stylesheet_directory_uri() . '/js
 wp_register_script('mangoJuice_main-script', get_stylesheet_directory_uri() . '/js/main.js', array(), "1.0.1", true);
 
 
-// Add scripts
+// Add script
 wp_enqueue_script( 'mangoJuice_jq_device');
 wp_enqueue_script( 'mangoJuice_mailchimp');
-wp_enqueue_script( 'mangoJuice_main-script', false, array( 'jquery' ));
+wp_enqueue_script( 'mangoJuice_main-script');
 
 
 }
