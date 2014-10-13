@@ -13,11 +13,11 @@
  */
 ?>
 
-<article id="intro">
+<section id="intro">
     <?php get_template_part( 'modules/module', 'intro') ;?>
-</article>
+</section>
 
-<article id="posts">
+<section id="posts">
     <h2>Portfolio</h2>
     <a href="<?php echo esc_url(get_category_link(get_cat_ID( 'portfolio' ))) ;?>" class="more">Meer..</a>
     <?php
@@ -37,9 +37,9 @@
 
         endwhile
     ;?>
-</article>
+</section>
 
-<article id="tijdelijk">
+<section id="tijdelijk">
     <h2>Mijn 3 beloftes:</h2>
     <?php
     //  Get the posts Query
@@ -58,6 +58,6 @@
 
     endwhile
     ;?>
-</article>
+</section>
 
 <?php get_template_part( 'modules/module', 'footer' ) ;?>
