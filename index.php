@@ -42,22 +42,42 @@
 <section id="tijdelijk">
     <h3>Mijn 3 beloftes:</h3>
     <?php
-    //  Get the posts Query
-    $my_query = new WP_Query( 'category_name=beloftes&posts_per_page=3' );
-    //  Initialize a counter
-    $count = 0;
+        //  Get the posts Query
+        $my_query = new WP_Query( 'category_name=beloftes&posts_per_page=3' );
+        //  Initialize a counter
+        $count = 0;
 
-    //  Loop trough the post query
-    while ( $my_query->have_posts() ) : $my_query->the_post();
+        //  Loop trough the post query
+        while ( $my_query->have_posts() ) : $my_query->the_post();
 
-        //  Update the counter
-        $count++;
+            //  Update the counter
+            $count++;
 
-        //  Print the post data in the preset format
-        get_template_part( 'modules/module', 'post');
+            //  Print the post data in the preset format
+            get_template_part( 'modules/module', 'post');
 
-    endwhile
+        endwhile
     ;?>
 </section>
 
+    <section id="blog">
+        <h3>Mijn blog</h3>
+        <?php
+            //  Get the posts Query
+            $my_query = new WP_Query( 'category_name=blog&posts_per_page=3' );
+            //  Initialize a counter
+            $count = 0;
+
+            //  Loop trough the post query
+            while ( $my_query->have_posts() ) : $my_query->the_post();
+
+                //  Update the counter
+                $count++;
+
+                //  Print the post data in the preset format
+                get_template_part( 'modules/module', 'post');
+
+            endwhile
+        ;?>
+    </section>
 <?php get_template_part( 'modules/module', 'footer' ) ;?>
