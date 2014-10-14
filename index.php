@@ -54,7 +54,7 @@
         $count++;
 
         //  Print the post data in the preset format
-        get_template_part( 'modules/module', 'posts');
+        get_template_part( 'modules/module', 'post');
 
     endwhile
     ;?>
