@@ -10,5 +10,13 @@ if ( ! $next && ! $previous ) {
 	return;
 }?>
 
-<?php previous_post_link( '%link', _x( '%title', 'Previous post link', 'mangoJuice' ) ); ?>
-<?php next_post_link( '%link', _x( '%title', 'Next post link', 'mangoJuice' ) ); ?>
+<section class="page-nav">
+    <div class="previous_post">
+        <div>Vorig item</div>
+        <?php previous_post_link( '%link' ); ?>
+    </div>
+    <div class="next-post">
+        <div>Volgend item</div>
+        <?php next_post_link( '%link' ); ?>
+    </div>
+</section>
