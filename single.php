@@ -26,11 +26,7 @@ get_template_part( 'modules/module', 'header' );
 			        <a href="<?php echo "#" ;?>">Bekijk de live website!</a>
 		        <?php endif; ?>
 
-                <section class="page-nav">
-
                     <?php get_template_part( 'snippets/snippet', 'page_navigation' ) ;?>
-
-                </section>
 
                 <section>
                     <?php comments_template(); ?>
