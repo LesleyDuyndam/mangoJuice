@@ -54,9 +54,27 @@ function mangoJuice_setup() {
 
 
 }
-
 // Fires after the theme is loaded.
 add_action( 'after_setup_theme', 'mangoJuice_setup' );
+
+
+
+
+
+
+
+
+
+/**
+ * Remove the Windows Live Writer links
+ * If not used, it only takes up valuable load time.
+ */
+function mangoJuice_remove_header_link() {
+    remove_action('wp_head', 'rsd_link');
+    remove_action('wp_head', 'wlwmanifest_link');
+}
+
+add_action('init', 'mangoJuice_remove_header_link');
 
 
 
