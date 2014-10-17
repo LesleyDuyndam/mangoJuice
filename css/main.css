@@ -62,4 +62,10 @@ ul.cheat {
       padding: 0;
       min-height: 0; }
 
+#intro video {
+  width: 600px;
+  height: 337px;
+  background-color: black;
+  -webkit-mask-image: url("../svg/head.svg"); }
+
 /*# sourceMappingURL=main.css.map */
