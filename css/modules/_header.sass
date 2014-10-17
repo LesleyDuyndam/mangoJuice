@@ -2,52 +2,48 @@ header#header
   position: fixed
   top: 0
   width: 100%
-  min-height: 75px
+  height: auto
+  min-height: 90px
   z-index: 100
-  background-color: $secondary-2
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3)
+  background-color: $primary-light
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1)
   &.closed
-
-    nav
-      margin-top: -350px
+    ul
+      margin-top: -340px
 
   &.open
-
-    nav
+    ul
       margin-top: 0
 
-  h1 a, h2
-    position: absolute
-    top: 25px
-    left: 20px
-    width: auto
-    color: $primary-light
 
+  h1 a
+    display: block
+    font-size: 0.6em
+    padding: 20px 15px 0
 
-  nav
-    background-color: $primary-light
+  h2
+    font-size: 0.6em
+    padding: 0 15px 20px
 
-    ul
-      margin-top: 75px
-      width: 100%
+  .current-menu-item > a
+    background-color: $accent
 
-    li
-      border-top: 1px solid $accent
-      &:hover, &.current_page_item
-        background-color: $accent
+  li
+    border-top: 1px solid $accent
+    &:hover
+      background-color: $accent
+
 
     a
       display: block
-      width: 80%
+      width: 100%
       height: 100%
       padding: 15px 10%
       &:hover, &:visited
-        width: 100%
-        height: 100%
         color: $primary-dark
 
 
-  img
+  img#navigation_button
     position: fixed
     top:    20px
     right:  20px
@@ -55,38 +51,3 @@ header#header
     height: 35px
     border: none
     cursor: pointer
-
-
-
-
-
-
-
-
-
-  //h1 a
-  //  position: absolute
-  //  top: 25px
-  //  left: 20px
-  //  width: auto
-  //  color: $primary-light
-  //  font-size: 0.7em
-  //
-  //#burger
-  //  display: block
-  //
-  //#exit
-  //  display: none
-  //
-  //line
-  //  stroke: $primary-light
-  //  fill: none
-  //
-  //&.active
-  //  //box-shadow: 0 0 25px rgba(0, 0, 0, 0.5)
-  //  nav
-  //    margin-top: 0
-  //  #burger
-  //    display: none
-  //  #exit
-  //    display: block
