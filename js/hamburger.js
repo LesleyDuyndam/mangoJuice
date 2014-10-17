@@ -159,7 +159,6 @@ jQuery( function(){
 
 
         var menu = new NAV_MENU();
-
         var button = new NAV_BUTTON();
 
 
