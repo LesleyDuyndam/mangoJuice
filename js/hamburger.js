@@ -1,7 +1,20 @@
 jQuery( function(){
 
     /**
-     * @type {HTMLElement}
+     *  HAMBURGER.JS
+     *
+     *  @author Lesley Duyndam
+     *
+     *  The hamburger.js jQuery plugin adds a hamburger button in the main navigation.
+     *  On button click, it:
+     *
+     *  1.  Switches the src of the img.
+     *      "burger.svg" (default)
+     *      "exit.svg"
+     *
+     *  2.  Switch the class of the nav. (default)
+     *      "open"
+     *      "closed"
      */
 
 
