@@ -35,6 +35,7 @@
     <?php wp_head(); ?>
 
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+
 </head>
 
 <!-- START BODY -->
@@ -52,11 +53,29 @@
             <h2><?php bloginfo('description'); ?></h2>
 
             <!-- START MAIN NAVIGATION -->
-                <?php
-                    wp_nav_menu( array(
-                        'theme_location' => 'Main',
-                        'container' => false
-                    ));
+            <?php
+
+            $menu_settings = array(
+            'theme_location'  => 'Main',
+            'menu'            => '',
+            'container'       => false,           // Set to NAV if nog in container
+            'container_class' => '',
+            'container_id'    => '',
+            'menu_class'      => 'menu',
+            'menu_id'         => '',
+            'echo'            => true,              // If false, teruns a STRING
+            'fallback_cb'     => 'wp_page_menu',
+            'before'          => '',               // Inside the <li>, before the <a>
+            'after'           => '',                // Inside the <li>, after the <a>
+            'link_before'     => '',
+            'link_after'      => '',
+            'items_wrap'      => '<ul class="menu">%3$s</ul>',
+            'depth'           => 0,
+            'walker'          => ''
+            );
+
+            wp_nav_menu( $menu_settings );
+
                 ?><!-- END MAIN NAVIGATION -->
         </nav>
 
