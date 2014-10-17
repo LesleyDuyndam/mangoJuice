@@ -71,24 +71,6 @@
     <?php
         wp_footer();
     ?>
-    <script>
-
-        /**
-         * Extends the "hamburger.js" jQuery plugin.
-         * @type {string}
-         */
-        // Get the template directory from PHP
-        var template_url = '<?php bloginfo('template_directory'); ?>';
-
-        // If the client is mobile OR a tablet in landscape mode
-        if( device.mobile() || device.tablet() && device.landscape() ) {
-
-            // Add the img#navigation_button to the header navigation
-            jQuery(' #header nav ' )
-                .append( "<img src='" + template_url + "/svg/burger.svg' id='navigation_button' alt='Burger icon' />" );
-        }
-
-    </script>
 </footer>
 </body>
 </html>
