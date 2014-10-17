@@ -33,8 +33,13 @@ jQuery( function(){
      *
      */
 
-
     if( device.mobile() || device.tablet() && device.landscape() ) {
+
+
+        // Add the img#navigation_button to the header navigation
+        jQuery(' #header nav ' )
+            .append( "<img src='" + wordpress.template_url + "/svg/burger.svg' id='navigation_button' alt='Burger icon' />" );
+
 
 
         /**
@@ -179,6 +184,8 @@ jQuery( function(){
 
 
 
+
+        // Check if window is smaller
     }
 
 
