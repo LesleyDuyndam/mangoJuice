@@ -37,7 +37,7 @@ jQuery( function(){
 
 
         // Add the img#navigation_button to the header navigation
-        jQuery(' #header nav ' )
+        jQuery(' header#header ' )
             .append( "<img src='" + wordpress.template_url + "/svg/burger.svg' id='navigation_button' alt='Burger icon' />" );
 
 

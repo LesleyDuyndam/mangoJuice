@@ -1,7 +1,5 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-    <g id="burger">
-        <line x1="2" y1="27.5" x2="33" y2="27.5"></line>
-        <line x1="2" y1="17.5" x2="33" y2="17.5"></line>
-        <line x1="2" y1="7.5" x2="33" y2="7.5"></line>
-    </g>
+        <line stroke="rgba(68,  63, 53, 1)" x1="2" y1="27.5" x2="33" y2="27.5"></line>
+        <line stroke="rgba(68,  63, 53, 1)" x1="2" y1="17.5" x2="33" y2="17.5"></line>
+        <line stroke="rgba(68,  63, 53, 1)" x1="2" y1="7.5" x2="33" y2="7.5"></line>
 </svg>
