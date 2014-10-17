@@ -73,6 +73,10 @@
     ?>
     <script>
 
+        /**
+         * Extends the "hamburger.js" jQuery plugin.
+         * @type {string}
+         */
         // Get the template directory from PHP
         var template_url = '<?php bloginfo('template_directory'); ?>';
 
