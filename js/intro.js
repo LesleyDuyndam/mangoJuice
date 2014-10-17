@@ -17,7 +17,7 @@ jQuery( function(){
 
 
             jQuery( ' #intro_container ' )
-                .html( '<video autoplay />' );
+                .html( '<video autoplay="true" loop="true" />' );
 
 
             jQuery( ' #intro_container video ' )
