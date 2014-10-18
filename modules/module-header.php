@@ -65,7 +65,7 @@
             'fallback_cb'     => 'wp_page_menu',
             'before'          => '',               // Inside the <li>, before the <a>
             'after'           => '',                // Inside the <li>, after the <a>
-            'link_before'     => '',
+            'link_before'     => '∆ ',
             'link_after'      => '',
             'items_wrap'      => '<ul class="menu">%3$s</ul>',
             'depth'           => 0,
