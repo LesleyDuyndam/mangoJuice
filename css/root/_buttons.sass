@@ -14,9 +14,10 @@
     border-bottom: 5px solid $primarycolor
 
 
-@mixin button_medium ($primarycolor, $secondarycolor, $float)
+@mixin button_medium ($primarycolor, $secondarycolor)
+  display: inline-block
   letter-spacing: 0.1em
-  float: $float
+  margin: $margin-vertical $margin-horizontal
   padding: 15px 20px
   text-shadow: $text-shadow
   color: $primary-light
@@ -46,6 +47,5 @@
 
 .more
   @include button_small($secondary-2, $secondary-2_accent, right)
-  margin-bottom: 20px
   text-decoration: none
   font-style: normal

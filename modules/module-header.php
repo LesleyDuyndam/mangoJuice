@@ -40,11 +40,6 @@
 
 <!-- START BODY -->
 <body id="body" <?php body_class(); ?>>
-
-<!--[if lt IE 7]>
-<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> for a secure and fast experience.</p>
-<![endif]-->
-
     <!-- START HEADER -->
     <header id="header">
         <h1><a href="<?php echo get_home_url();?>"><?php bloginfo('name'); ?></a></h1>
@@ -65,7 +60,7 @@
             'fallback_cb'     => 'wp_page_menu',
             'before'          => '',               // Inside the <li>, before the <a>
             'after'           => '',                // Inside the <li>, after the <a>
-            'link_before'     => '∆ ',
+            'link_before'     => '',
             'link_after'      => '',
             'items_wrap'      => '<ul class="menu">%3$s</ul>',
             'depth'           => 0,

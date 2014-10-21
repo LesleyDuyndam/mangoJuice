@@ -2,10 +2,9 @@
 /** The posts template file */
 ?>
 
-<section class="post promise-<?php echo $count;?>">
+<section class="card">
 
-    <header>
-        <?php the_post_thumbnail(); ?>
+    <header style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>');">
         <h4 class="img-overlay"><?php the_title(); ?></h4>
     </header>
 
@@ -14,9 +13,6 @@
     </article>
 
     <footer>
-        <?php if(true) : ?>
-            <a href="<?php echo "#" ;?>">Bekijk de live website!</a>
-        <?php endif; ?>
         <a href="<?php echo get_permalink() ;?>" class="post_more">Lees verder</a>
     </footer>
 

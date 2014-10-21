@@ -17,7 +17,7 @@
     <?php get_template_part( 'modules/module', 'intro') ;?>
 </section>
 
-<section id="posts">
+<section id="portfolio">
     <h3>Mijn portfolio</h3>
     <a href="<?php echo esc_url(get_category_link(get_cat_ID( 'portfolio' ))) ;?>" class="more">Meer..</a>
     <?php
@@ -33,13 +33,13 @@
             $count++;
 
             //  Print the post data in the preset format
-            get_template_part( 'modules/module', 'post');
+            get_template_part( 'modules/module', 'card');
 
         endwhile
     ;?>
 </section>
 
-<section id="tijdelijk">
+<section id="beloftes">
     <h3>Mijn 3 beloftes</h3>
     <?php
         //  Get the posts Query
@@ -54,7 +54,7 @@
             $count++;
 
             //  Print the post data in the preset format
-            get_template_part( 'modules/module', 'post');
+            get_template_part( 'modules/module', 'card');
 
         endwhile
     ;?>
@@ -76,7 +76,7 @@
                 $count++;
 
                 //  Print the post data in the preset format
-                get_template_part( 'modules/module', 'post');
+                get_template_part( 'modules/module', 'card');
 
             endwhile
         ;?>

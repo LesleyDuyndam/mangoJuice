@@ -14,8 +14,8 @@ body {
   padding-top: 75px;
   background-color: #f8f8f8; }
 
-body > section {
-  padding: 20% 0; }
+body > section, body > footer {
+  padding-top: 150px; }
 
 img {
   width: 100%;
@@ -26,23 +26,33 @@ img {
 /*  FONT VARIABLES */
 /*  FONT STYLES */
 body {
-  font-size: 1.2em; }
+  font-size: 1em; }
 
 h1, h2, h3 {
   font-family: "Convergence", sans-serif;
   font-weight: 100;
   letter-spacing: 0.02em; }
 
-h4, h5, h6, p {
+h4, h5, h6, p, .more {
   font-family: "Roboto", sans-serif;
   font-weight: 100; }
 
 header, nav {
   font-family: "Convergence", sans-serif; }
   header a, header a:hover, header a:visited, header a:active, nav a, nav a:hover, nav a:visited, nav a:active {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
     color: #443f35; }
   header h1 a, header h1 a:hover, header h1 a:visited, header h1 a:active, nav h1 a, nav h1 a:hover, nav h1 a:visited, nav h1 a:active {
+    font-family: "Convergence", sans-serif;
     color: #c26559; }
+
+section h1, section h2, section h3, section h4, section h5, section h6, section p {
+  padding: 10px 15px; }
+section h3 {
+  display: inline-block; }
+section h4 {
+  font-size: 1.4em; }
 
 .more {
   letter-spacing: 0.1em;
@@ -60,7 +70,6 @@ header, nav {
       -webkit-transition--moz-transition--ms-transition: 0.1s ease-in-out;
         -webkit-transition--moz-transition--ms-transition--o-transition: 0.1s ease-in-out;
           -webkit-transition--moz-transition--ms-transition--o-transition-transition: 0.1s ease-in-out;
-  margin-bottom: 20px;
   text-decoration: none;
   font-style: normal; }
   .more:hover {
@@ -82,10 +91,9 @@ header#header {
   header#header h1 a {
     display: block;
     font-size: 0.6em;
-    padding: 13px 15px 0; }
+    padding: 24px 15px; }
   header#header h2 {
-    font-size: 0.6em;
-    padding: 0 15px 15px 16px; }
+    font-size: 0.6em; }
   header#header .current-menu-item > a {
     background-color: rgba(118, 113, 103, 0.1); }
   header#header li {
@@ -108,10 +116,64 @@ header#header {
     border: none;
     cursor: pointer; }
 
-#intro video {
-  width: 600px;
-  height: 337px;
-  background-color: black;
-  -webkit-mask-image: url("../svg/head.svg"); }
+#intro {
+  text-align: center; }
+  #intro img {
+    width: 55%; }
+  #intro video {
+    width: 600px;
+    height: 337px;
+    background-color: black;
+    -webkit-mask-image: url("../svg/head.svg"); }
+
+.card {
+  display: inline-block;
+  margin: 20px 15px 0;
+  padding: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
+  .card:hover header {
+    background-size: 150% auto; }
+  .card:hover .img-overlay {
+    background-color: rgba(0, 0, 0, 0.7); }
+  .card header {
+    background-size: 100% auto;
+    background-position: 50% 50%;
+    text-align: center;
+    -webkit-transition: 0.1s ease-in-out;
+      -webkit-transition--moz-transition: 0.1s ease-in-out;
+        -webkit-transition--moz-transition--ms-transition: 0.1s ease-in-out;
+          -webkit-transition--moz-transition--ms-transition--o-transition: 0.1s ease-in-out;
+            -webkit-transition--moz-transition--ms-transition--o-transition-transition: 0.1s ease-in-out; }
+  .card .post_more {
+    display: inline-block;
+    letter-spacing: 0.1em;
+    margin: 15px 10px;
+    padding: 15px 20px;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+    color: #f8f8f8;
+    background-color: #72a099;
+    border: none;
+    border-radius: 0;
+    border-top: 7px solid rgba(255, 255, 255, 0);
+    border-bottom: 7px solid #425d59;
+    -webkit-transition: 0.1s ease-in-out;
+      -webkit-transition--moz-transition: 0.1s ease-in-out;
+        -webkit-transition--moz-transition--ms-transition: 0.1s ease-in-out;
+          -webkit-transition--moz-transition--ms-transition--o-transition: 0.1s ease-in-out;
+            -webkit-transition--moz-transition--ms-transition--o-transition-transition: 0.1s ease-in-out;
+    font-style: normal; }
+    .card .post_more:hover {
+      border-bottom: 7px solid #72a099; }
+  .card .img-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    display: block;
+    padding: 100px 30px;
+    color: #f8f8f8;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+    -webkit-transition: 0.1s ease-in-out;
+      -webkit-transition--moz-transition: 0.1s ease-in-out;
+        -webkit-transition--moz-transition--ms-transition: 0.1s ease-in-out;
+          -webkit-transition--moz-transition--ms-transition--o-transition: 0.1s ease-in-out;
+            -webkit-transition--moz-transition--ms-transition--o-transition-transition: 0.1s ease-in-out; }
 
 /*# sourceMappingURL=main.css.map */

@@ -33,13 +33,15 @@ jQuery( function(){
      *
      */
 
-    if( device.mobile() || device.tablet() && device.landscape() ) {
+    if( device.mobile() || device.tablet() && device.portrait() ) {
 
 
         // Add the img#navigation_button to the header navigation
         jQuery(' header#header ' )
             .append( "<img src='" + wordpress.template_url + "/svg/burger.svg' id='navigation_button' alt='Burger icon' />" );
 
+        jQuery( ' header#header h2 ' )
+            .remove();
 
 
         /**
@@ -181,6 +183,8 @@ jQuery( function(){
 
 
             });
+
+        jQuery( )
 
 
 
