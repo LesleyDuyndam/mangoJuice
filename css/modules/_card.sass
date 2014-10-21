@@ -5,29 +5,13 @@
   border-radius: $border-radius
   overflow: hidden
   background-color: $primary-light
-  &:hover
-
-    header
-      background-size: 150% auto
-
-    .img-overlay
-      background-color: rgba(0, 0, 0, 0.7)
-
-
   header
     background-size: 100% auto
     background-position: 50% 50%
     text-align: center
     @include transition( 0.1s ease-in-out )
 
-  .card_more
-    @include button_medium($secondary-1, $secondary-1_accent)
-    float: right
-    margin: 0 $margin-horizontal $margin-horizontal
-    font-style: normal
-    border-radius: $border-radius
-
-  .img-overlay
+  h4
     background-color: rgba(0, 0, 0, 0.4)
     display: block
     padding: 100px 30px
@@ -35,12 +19,17 @@
     text-shadow: $text-shadow
     @include transition( 0.1s ease-in-out )
 
-  h1, h2, h3, h4, h5, h6, p
+  &:hover
+    header
+      background-size: 150% auto
+
+    h4
+      background-color: rgba(0, 0, 0, 0.7)
+
+  p
     padding: $margin-vertical $margin-horizontal
     display: inline-block
 
-  h3
+  a
+    padding: 0 $margin-horizontal $margin-vertical
     display: inline-block
-
-  h4
-    font-size: 1.7em

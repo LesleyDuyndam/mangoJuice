@@ -5,7 +5,7 @@
 <section class="card">
 
     <header style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>');">
-        <h4 class="img-overlay"><?php the_title(); ?></h4>
+        <h4><?php the_title(); ?></h4>
     </header>
 
     <article>
@@ -13,7 +13,7 @@
     </article>
 
     <footer>
-        <a href="<?php echo get_permalink() ;?>" class="card_more">Lees verder</a>
+        <a href="<?php echo get_permalink() ;?>">Lees verder</a>
     </footer>
 
 </section>
