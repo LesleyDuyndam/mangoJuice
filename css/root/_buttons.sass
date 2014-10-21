@@ -1,6 +1,5 @@
-@mixin button_small ($primarycolor, $secondarycolor, $float)
+@mixin button_small ($primarycolor, $secondarycolor)
   letter-spacing: 0.1em
-  float: $float
   padding: 10px 15px
   text-shadow: $text-shadow
   color: $primary-light
@@ -8,7 +7,6 @@
   border: none
   @include border-radius
   border-bottom: 5px solid $secondarycolor
-  border-top: 5px solid rgba(255, 255, 255, 0)
   @include transition( 0.1s ease-in-out )
   &:hover
     border-bottom: 5px solid $primarycolor
@@ -17,22 +15,19 @@
 @mixin button_medium ($primarycolor, $secondarycolor)
   display: inline-block
   letter-spacing: 0.1em
-  margin: $margin-vertical $margin-horizontal
   padding: 15px 20px
   text-shadow: $text-shadow
   color: $primary-light
   background-color: $primarycolor
   border: none
   @include border-radius
-  border-top: 7px solid rgba(255, 255, 255, 0)
   border-bottom: 7px solid $secondarycolor
   @include transition( 0.1s ease-in-out )
   &:hover
     border-bottom: 7px solid $primarycolor
 
-@mixin button_large ($primarycolor, $secondarycolor, $float)
+@mixin button_large ($primarycolor, $secondarycolor)
   letter-spacing: 0.1em
-  float: $float
   padding: 10% 15%
   text-shadow: $text-shadow
   color: $primary-light
@@ -40,12 +35,13 @@
   border: none
   @include border-radius
   border-bottom: 10px solid $secondarycolor
-  border-top: 10px solid rgba(255, 255, 255, 0)
   @include transition( 0.1s ease-in-out )
   &:hover
     border-bottom: 10px solid $primarycolor
 
 .more
-  @include button_small($secondary-2, $secondary-2_accent, right)
+  @include button_small($secondary-2, $secondary-2_accent)
+  float: right
   text-decoration: none
+  margin-right: $margin-horizontal
   font-style: normal

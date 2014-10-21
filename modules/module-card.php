@@ -13,7 +13,7 @@
     </article>
 
     <footer>
-        <a href="<?php echo get_permalink() ;?>" class="post_more">Lees verder</a>
+        <a href="<?php echo get_permalink() ;?>" class="card_more">Lees verder</a>
     </footer>
 
 </section>

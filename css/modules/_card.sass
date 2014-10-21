@@ -1,9 +1,10 @@
 .card
   display: inline-block
-  margin: 20px 15px 0
-  padding: 0
+  margin: $margin-vertical $margin-horizontal 0
   box-shadow: $background
-  //@include transition( 0.1s ease-in-out )
+  border-radius: $border-radius
+  overflow: hidden
+  background-color: $primary-light
   &:hover
 
     header
@@ -19,9 +20,12 @@
     text-align: center
     @include transition( 0.1s ease-in-out )
 
-  .post_more
+  .card_more
     @include button_medium($secondary-1, $secondary-1_accent)
+    float: right
+    margin: 0 $margin-horizontal $margin-horizontal
     font-style: normal
+    border-radius: $border-radius
 
   .img-overlay
     background-color: rgba(0, 0, 0, 0.4)
@@ -30,3 +34,13 @@
     color: $primary-light
     text-shadow: $text-shadow
     @include transition( 0.1s ease-in-out )
+
+  h1, h2, h3, h4, h5, h6, p
+    padding: $margin-vertical $margin-horizontal
+    display: inline-block
+
+  h3
+    display: inline-block
+
+  h4
+    font-size: 1.7em
