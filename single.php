@@ -8,14 +8,15 @@ get_template_part( 'modules/module', 'header' );
             <header>
 
 
-        <?php the_post_thumbnail(); ?>
-        <?php get_template_part( 'snippets/snippet', 'bread_crumb'); ?>
+                <?php the_post_thumbnail(); ?>
 
                 <h3><?php the_title(); ?></h3>
 
             </header>
 
-	        <article>
+            <?php get_template_part( 'snippets/snippet', 'bread_crumb'); ?>
+
+            <article>
 
 		        <?php echo the_content() ;?>
 

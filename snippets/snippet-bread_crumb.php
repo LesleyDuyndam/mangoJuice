@@ -3,8 +3,8 @@
 //Snippet must be placed inside the loop
 ?>
 
-<section class="bread-crumbs">
+<section class="breadcrumbs">
 
-    <?php mangoJuice_breadcrumbs( "/" ) ;?>
+    <?php mangoJuice_breadcrumbs( " > " ) ;?>
 
 </section>

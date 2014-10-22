@@ -1,7 +1,9 @@
+/* Assets, set up de document */
 /*  COLOR VARIABLES */
 /* SHADOW VARIABLES */
 /* PADDING SETUP */
 /* BORDER RADIUS */
+/* WIDTHS */
 /* SET RESPONSIVE BREAKPOINTS */
 @import url("//fonts.googleapis.com/css?family=Convergence:400");
 @import url("//fonts.googleapis.com/css?family=Roboto:400,100,100italic,400italic");
@@ -77,6 +79,9 @@ footer section h3 {
   font-style: normal; }
   .more:hover {
     border-bottom: 5px solid #72a099; }
+
+.breadcrumbs div {
+  display: inline-block; }
 
 .mobile header#header {
   position: fixed;
@@ -251,8 +256,8 @@ footer#footer h3 {
 #follow-me {
   background-color: #443f35; }
   #follow-me input {
-    padding: 10px 3%;
-    width: 94%;
+    padding: 20px 6%;
+    width: 88%;
     border: none; }
   #follow-me button {
     display: inline-block;
@@ -280,8 +285,8 @@ footer#footer h3 {
     font-family: "Roboto", sans-serif;
     margin: 15px 0;
     font-size: 0.7em;
-    background-color: #f8f8f8;
-    padding: 30px 15px 30px 105px;
+    background-color: #f8f8f8 !important;
+    padding: 30px 15px 30px 105px !important;
     background-image: url("../svg/icons/exclamation8.svg");
     background-repeat: no-repeat;
     background-size: 50px;
@@ -290,7 +295,9 @@ footer#footer h3 {
     color: #443f35;
     background-image: url("../svg/icons/checkboxmark.svg"); }
 
-.tablet .portrait footer#footer #find-me, .tablet .portrait footer#footer #talk-to-me, .desktop footer#footer #find-me, .desktop footer#footer #talk-to-me {
+.tablet .portrait footer#footer #find-me,
+.tablet .portrait footer#footer #talk-to-me, .desktop footer#footer #find-me,
+.desktop footer#footer #talk-to-me {
   vertical-align: top;
   display: inline-block;
   width: 30%;

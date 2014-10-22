@@ -68,8 +68,8 @@ footer#footer
   background-color: $primary-dark
 
   input
-    padding: 10px 3%
-    width: 94%
+    padding: 20px 6%
+    width: 88%
     border: none
 
   button
@@ -80,14 +80,15 @@ footer#footer
     text-align: center
 
   div
-    &.mce_inline_error, &#mce-error-response
+    &.mce_inline_error,
+    &#mce-error-response
       color: $secondary-2_accent
       text-align: left
       font-family: $font-2
       margin: 15px 0
       font-size: 0.7em
-      background-color: $primary-light
-      padding: 30px 15px 30px 105px
+      background-color: $primary-light !important
+      padding: 30px 15px 30px 105px !important
       background-image: url("../svg/icons/exclamation8.svg")
       background-repeat: no-repeat
       background-size: 50px
@@ -100,7 +101,8 @@ footer#footer
 .tablet .portrait, .desktop
   footer#footer
 
-    #find-me, #talk-to-me
+    #find-me,
+    #talk-to-me
       vertical-align: top
       display: inline-block
       width: 30%
