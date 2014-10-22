@@ -1,8 +1,8 @@
 /* The footer styles */
 
-footer
+footer#footer
   section
-    padding: 60px $mobile-padding
+    padding: 150px $mobile-padding
 
   h3
     color: $primary-light
@@ -37,20 +37,21 @@ footer
   background-color: $secondary-2
 
   img
-    display: inline-blok
+    display: inline-block
     vertical-align: top
     width: 38%
-    margin-top: 12%
+    margin-top: 40px
 
   ul
-    font-family: $font-1
-    font-size: 0.7em
-    line-height: 1.7em
-    color: $primary-light
     display: inline-block
-    width: 58%
     padding-left: 2%
-    border-left: 1px solid $primary-dark
+    font-family:  $font-2
+    font-size:    0.7em
+    line-height:  1.7em
+    color:        $primary-light
+
+  li
+    letter-spacing: 0.1em
 
   h4
     font-family: $font-1
@@ -95,3 +96,20 @@ footer
     &#mce-succes-response
       color: $primary-dark
       background-image: url("../svg/icons/checkboxmark.svg")
+
+.tablet .portrait, .desktop
+  footer#footer
+
+    #find-me, #talk-to-me
+      vertical-align: top
+      display: inline-block
+      width: 30%
+      height: 250px
+      padding: 10%
+      margin: 0
+      border: 0
+
+    #talk-to-me
+      img
+        width: 40%
+        margin-top: 15px

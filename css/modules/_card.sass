@@ -1,6 +1,6 @@
 .card
   display: inline-block
-  margin: $margin-vertical $margin-horizontal 0
+  margin: $margin-horizontal $margin-horizontal 0
   box-shadow: $background
   border-radius: $border-radius
   overflow: hidden
@@ -15,6 +15,7 @@
     background-color: rgba(0, 0, 0, 0.4)
     display: block
     padding: 100px 30px
+    font-size: 1.5em
     color: $primary-light
     text-shadow: $text-shadow
     @include transition( 0.1s ease-in-out )
@@ -33,3 +34,9 @@
   a
     padding: 0 $margin-horizontal $margin-vertical
     display: inline-block
+
+
+.desktop
+
+  .card
+    width: 30%

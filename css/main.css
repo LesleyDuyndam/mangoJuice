@@ -13,8 +13,10 @@
 header#header a, nav a {
   text-decoration: none; }
 
+.mobile body {
+  padding-top: 75px; }
+
 body {
-  padding-top: 75px;
   background-color: #f8f8f8; }
 
 body > section, body > footer {
@@ -24,6 +26,10 @@ img {
   width: 100%;
   height: auto;
   border: none; }
+
+.tablet .landscape header#header, .tablet .landscape body > section, .desktop header#header, .desktop body > section {
+  width: 1200px;
+  margin: 0 auto; }
 
 /*  FONT IMPORT */
 /*  FONT VARIABLES */
@@ -72,13 +78,15 @@ footer section h3 {
   .more:hover {
     border-bottom: 5px solid #72a099; }
 
-header#header {
+.mobile header#header {
   position: fixed;
   top: 0;
   width: 100%;
   height: auto;
   min-height: 75px;
-  z-index: 100;
+  z-index: 100; }
+
+header#header {
   background-color: #72a099;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); }
   header#header.closed ul {
@@ -92,6 +100,7 @@ header#header {
     padding: 27px 15px;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2); }
     header#header h1 a:hover, header#header h1 a:visited, header#header h1 a:active {
+      font-family: "Convergence", sans-serif;
       color: #f8f8f8; }
   header#header a, header#header a:hover, header#header a:visited, header#header a:active {
     font-family: "Roboto", sans-serif;
@@ -121,6 +130,13 @@ header#header {
     border: none;
     cursor: pointer; }
 
+.tablet .landscape header#header a, .desktop header#header a {
+  display: block;
+  width: auto;
+  height: auto; }
+.tablet .landscape header#header li, .desktop header#header li {
+  display: inline-block; }
+
 #intro {
   text-align: center; }
   #intro img {
@@ -133,7 +149,7 @@ header#header {
 
 .card {
   display: inline-block;
-  margin: 30px 15px 0;
+  margin: 15px 15px 0;
   box-shadow: 0 0 7px rgba(100, 100, 100, 0.2);
   border-radius: 3px;
   overflow: hidden;
@@ -151,6 +167,7 @@ header#header {
     background-color: rgba(0, 0, 0, 0.4);
     display: block;
     padding: 100px 30px;
+    font-size: 1.5em;
     color: #f8f8f8;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
     -webkit-transition: 0.1s ease-in-out;
@@ -169,10 +186,13 @@ header#header {
     padding: 0 15px 30px;
     display: inline-block; }
 
+.desktop .card {
+  width: 30%; }
+
 /* The footer styles */
-footer section {
-  padding: 60px 4%; }
-footer h3 {
+footer#footer section {
+  padding: 150px 4%; }
+footer#footer h3 {
   color: #f8f8f8;
   margin-bottom: 15px;
   font-size: 0.8em; }
@@ -205,19 +225,19 @@ footer h3 {
 #talk-to-me {
   background-color: #c26559; }
   #talk-to-me img {
-    display: inline-blok;
+    display: inline-block;
     vertical-align: top;
     width: 38%;
-    margin-top: 12%; }
+    margin-top: 40px; }
   #talk-to-me ul {
-    font-family: "Convergence", sans-serif;
+    display: inline-block;
+    padding-left: 2%;
+    font-family: "Roboto", sans-serif;
     font-size: 0.7em;
     line-height: 1.7em;
-    color: #f8f8f8;
-    display: inline-block;
-    width: 58%;
-    padding-left: 2%;
-    border-left: 1px solid #443f35; }
+    color: #f8f8f8; }
+  #talk-to-me li {
+    letter-spacing: 0.1em; }
   #talk-to-me h4 {
     font-family: "Convergence", sans-serif;
     font-size: 1.5em; }
@@ -269,5 +289,17 @@ footer h3 {
   #follow-me div#mce-succes-response {
     color: #443f35;
     background-image: url("../svg/icons/checkboxmark.svg"); }
+
+.tablet .portrait footer#footer #find-me, .tablet .portrait footer#footer #talk-to-me, .desktop footer#footer #find-me, .desktop footer#footer #talk-to-me {
+  vertical-align: top;
+  display: inline-block;
+  width: 30%;
+  height: 250px;
+  padding: 10%;
+  margin: 0;
+  border: 0; }
+.tablet .portrait footer#footer #talk-to-me img, .desktop footer#footer #talk-to-me img {
+  width: 40%;
+  margin-top: 15px; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,10 +1,13 @@
+.mobile
+  header#header
+    position: fixed
+    top: 0
+    width: 100%
+    height: auto
+    min-height: 75px
+    z-index: 100
+
 header#header
-  position: fixed
-  top: 0
-  width: 100%
-  height: auto
-  min-height: 75px
-  z-index: 100
   background-color: $secondary-1
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1)
   &.closed
@@ -24,6 +27,7 @@ header#header
       text-shadow: $text-shadow
 
       &:hover, &:visited, &:active
+        font-family: $font-1
         color: $primary-light
 
   a, a:hover, a:visited, a:active
@@ -60,3 +64,13 @@ header#header
     height: 35px
     border: none
     cursor: pointer
+
+.tablet .landscape, .desktop
+  header#header
+    a
+      display: block
+      width: auto
+      height: auto
+
+    li
+      display: inline-block

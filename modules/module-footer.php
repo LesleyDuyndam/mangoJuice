@@ -25,11 +25,9 @@
                 </a>
             </li>
         </ul>
-    </section>
-
-    <section id="talk-to-me">
+    </section><section id="talk-to-me">
         <h3>Neem contact op met mij via</h3>
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/LesleyDuyndam_head.svg" alt="Lesley Duyndam logo"/>
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/LesleyDuyndam_head.svg" id="footer_logo" alt="Lesley Duyndam logo"/>
         <ul>
             <li><h4>Lesley Duyndam</h4></li>
             <li><h5>Direct contact</h5></li>
@@ -39,9 +37,7 @@
             <li>Professor Verbernelaan 112-06</li>
             <li>5037AK, Tilburg</li>
         </ul>
-    </section>
-
-    <section id="follow-me">
+    </section><section id="follow-me">
         <h3>Nieuwsbrief</h3>
         <!-- Begin MailChimp Signup Form -->
         <div id="mc_embed_signup">
