@@ -17,21 +17,33 @@ header#header a, nav a {
 
 .mobile body {
   padding-top: 75px; }
+.mobile body > section {
+  width: 95%; }
+
+.tablet .portrait body > section {
+  width: 95%; }
+
+.tablet .landscape body > section {
+  width: 90%; }
+
+.desktop body > section,
+.desktop footer > input {
+  width: 80%;
+  min-width: 0;
+  max-width: 1500px; }
 
 body {
   background-color: #f8f8f8; }
 
-body > section, body > footer {
-  padding-top: 150px; }
+body > section,
+body > footer {
+  padding-top: 150px;
+  margin: 0 auto; }
 
 img {
   width: 100%;
   height: auto;
   border: none; }
-
-.tablet .landscape header#header, .tablet .landscape body > section, .desktop header#header, .desktop body > section {
-  width: 1200px;
-  margin: 0 auto; }
 
 /*  FONT IMPORT */
 /*  FONT VARIABLES */
@@ -154,11 +166,11 @@ header#header {
 
 .card {
   display: inline-block;
-  margin: 15px 15px 0;
-  box-shadow: 0 0 7px rgba(100, 100, 100, 0.2);
+  background-color: #f8f8f8;
+  margin: 15px 0;
   border-radius: 3px;
   overflow: hidden;
-  background-color: #f8f8f8; }
+  box-shadow: 0 0 7px rgba(100, 100, 100, 0.2); }
   .card header {
     background-size: 100% auto;
     background-position: 50% 50%;
@@ -185,10 +197,10 @@ header#header {
   .card:hover h4 {
     background-color: rgba(0, 0, 0, 0.7); }
   .card p {
-    padding: 30px 15px;
+    padding: 15px 5%;
     display: inline-block; }
   .card a {
-    padding: 0 15px 30px;
+    padding: 0 5% 30px;
     display: inline-block; }
 
 .desktop .card {

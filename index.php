@@ -18,8 +18,10 @@
 </section>
 
 <section id="portfolio">
-    <h3>Mijn portfolio</h3>
-    <a href="<?php echo esc_url(get_category_link(get_cat_ID( 'portfolio' ))) ;?>" class="more">Meer..</a>
+    <header>
+        <h3>Mijn portfolio</h3>
+        <a href="<?php echo esc_url(get_category_link(get_cat_ID( 'portfolio' ))) ;?>" class="more">Meer..</a>
+    </header>
     <?php
         //  Get the posts Query
         $my_query = new WP_Query( 'category_name=portfolio&posts_per_page=3' );
@@ -40,7 +42,9 @@
 </section>
 
 <section id="beloftes">
-    <h3>Mijn 3 beloftes</h3>
+    <header>
+        <h3>Mijn 3 beloftes</h3>
+    </header>
     <?php
         //  Get the posts Query
         $my_query = new WP_Query( 'category_name=beloftes&posts_per_page=3' );
@@ -61,8 +65,10 @@
 </section>
 
     <section id="blog">
-        <h3>Mijn blog</h3>
-        <a href="<?php echo esc_url(get_category_link(get_cat_ID( 'blog' ))) ;?>" class="more">Meer..</a>
+        <header>
+            <h3>Mijn blog</h3>
+            <a href="<?php echo esc_url(get_category_link(get_cat_ID( 'blog' ))) ;?>" class="more">Meer..</a>
+        </header>
         <?php
             //  Get the posts Query
             $my_query = new WP_Query( 'category_name=blog&posts_per_page=3' );

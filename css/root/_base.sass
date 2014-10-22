@@ -2,19 +2,33 @@
   body
     padding-top: 75px
 
+  body > section
+    width: $width-mobile
+
+.tablet .portrait
+  body > section
+    width: $width-tablet-portrait
+
+.tablet .landscape
+  body > section
+    width: $width-tablet-landscape
+
+.desktop
+  body > section,
+  footer > input
+    width: $width-desktop
+    min-width: $width-desktop-min
+    max-width: $width-desktop-max
+
 body
   background-color: $primary-light
 
-body > section, body > footer
+body > section,
+body > footer
   padding-top: 150px
+  margin: 0 auto
 
 img
   width: 100%
   height: auto
   border: none
-
-.tablet .landscape, .desktop
-
-  header#header, body > section
-    width: 1200px
-    margin: 0 auto

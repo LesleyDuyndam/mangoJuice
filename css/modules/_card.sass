@@ -1,10 +1,10 @@
 .card
   display: inline-block
-  margin: $margin-horizontal $margin-horizontal 0
-  box-shadow: $background
+  background-color: $primary-light
+  margin: $padding-mobile-vertical 0
   border-radius: $border-radius
   overflow: hidden
-  background-color: $primary-light
+  box-shadow: $background
   header
     background-size: 100% auto
     background-position: 50% 50%
@@ -28,11 +28,11 @@
       background-color: rgba(0, 0, 0, 0.7)
 
   p
-    padding: $margin-vertical $margin-horizontal
+    padding: $padding-mobile-vertical $padding-mobile
     display: inline-block
 
   a
-    padding: 0 $margin-horizontal $margin-vertical
+    padding: 0 $padding-mobile ( 2 * $padding-mobile-vertical)
     display: inline-block
 
 
