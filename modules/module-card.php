@@ -2,10 +2,10 @@
 /** The posts template file */
 ?>
 
-<section class="card">
+<section class="card" itemscope itemtype="" >
 
     <header style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>');">
-        <h4><?php the_title(); ?></h4>
+        <h4 itemprop="name" ><?php the_title(); ?></h4>
     </header>
 
     <article>

@@ -10,7 +10,8 @@
 * {
   margin: 0;
   padding: 0;
-  list-style: none; }
+  list-style: none;
+  vertical-align: top; }
 
 header#header a, nav a {
   text-decoration: none; }
@@ -19,6 +20,8 @@ header#header a, nav a {
   padding-top: 75px; }
 .mobile body > section {
   width: 95%; }
+.mobile body > section > header {
+  padding: 0 0 15px; }
 
 .tablet .portrait body > section {
   width: 95%; }
@@ -45,6 +48,13 @@ img {
   height: auto;
   border: none; }
 
+.single-post #img-header {
+  width: 100%;
+  height: 400px;
+  background-size: cover; }
+.single-post h3 {
+  font-size: 3em; }
+
 /*  FONT IMPORT */
 /*  FONT VARIABLES */
 /*  FONT STYLES */
@@ -63,7 +73,6 @@ h5, h6, p, .more, .card a {
   font-weight: 100; }
 
 section h3 {
-  margin-left: 15px;
   display: inline-block;
   padding: 10px 0; }
 
@@ -86,9 +95,9 @@ footer section h3 {
         -webkit-transition--moz-transition--ms-transition--o-transition: 0.1s ease-in-out;
           -webkit-transition--moz-transition--ms-transition--o-transition-transition: 0.1s ease-in-out;
   float: right;
-  text-decoration: none;
-  margin-right: 15px;
-  font-style: normal; }
+  font-size: 0.8em;
+  font-weight: 400;
+  text-decoration: none; }
   .more:hover {
     border-bottom: 5px solid #72a099; }
 
@@ -167,7 +176,7 @@ header#header {
 .card {
   display: inline-block;
   background-color: #f8f8f8;
-  margin: 15px 0;
+  margin: 3.75px 0;
   border-radius: 3px;
   overflow: hidden;
   box-shadow: 0 0 7px rgba(100, 100, 100, 0.2); }
@@ -257,13 +266,14 @@ footer#footer h3 {
     letter-spacing: 0.1em; }
   #talk-to-me h4 {
     font-family: "Convergence", sans-serif;
+    margin-bottom: 2px;
     font-size: 1.5em; }
   #talk-to-me h5 {
     font-size: 1em;
     font-family: "Convergence", sans-serif;
     color: #443f35;
     font-style: italic;
-    margin: 10px 0 0; }
+    margin: 20px 0 0; }
 
 #follow-me {
   background-color: #443f35; }
@@ -320,5 +330,22 @@ footer#footer h3 {
 .tablet .portrait footer#footer #talk-to-me img, .desktop footer#footer #talk-to-me img {
   width: 40%;
   margin-top: 15px; }
+
+section.single-post {
+  padding-top: 0; }
+  section.single-post h3 {
+    padding: 30px 0; }
+
+section.breadcrumbs {
+  background-color: #d0d0d0;
+  width: 90%;
+  padding: 50px 5%;
+  overflow: scroll; }
+  section.breadcrumbs div {
+    display: inline-block; }
+    section.breadcrumbs div:first-child {
+      margin-left: -200%;
+      width: 300%;
+      text-align: right; }
 
 /*# sourceMappingURL=main.css.map */

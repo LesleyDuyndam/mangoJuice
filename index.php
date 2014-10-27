@@ -20,7 +20,7 @@
 <section id="portfolio">
     <header>
         <h3>Mijn portfolio</h3>
-        <a href="<?php echo esc_url(get_category_link(get_cat_ID( 'portfolio' ))) ;?>" class="more">Meer..</a>
+        <a href="<?php echo esc_url(get_category_link(get_cat_ID( 'portfolio' ))) ;?>" class="more">MEER</a>
     </header>
     <?php
         //  Get the posts Query
@@ -67,7 +67,7 @@
     <section id="blog">
         <header>
             <h3>Mijn blog</h3>
-            <a href="<?php echo esc_url(get_category_link(get_cat_ID( 'blog' ))) ;?>" class="more">Meer..</a>
+            <a href="<?php echo esc_url(get_category_link(get_cat_ID( 'blog' ))) ;?>" class="more">MEER</a>
         </header>
         <?php
             //  Get the posts Query

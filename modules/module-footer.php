@@ -30,8 +30,11 @@
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/LesleyDuyndam_head.svg" id="footer_logo" alt="Lesley Duyndam logo"/>
         <ul>
             <li><h4>Lesley Duyndam</h4></li>
-            <li><h5>Direct contact</h5></li>
-            <li>lesleyduyndam@gmail.com</li>
+            <li>
+                <a href="mailto:info@lesleyduyndam.nl?subject=Hoi Lesley!">
+                    info@lesleyduyndam.nl
+                </a>
+            </li>
             <li>+316 4546 0121</li>
             <li><h5>Postadres</h5></li>
             <li>Professor Verbernelaan 112-06</li>

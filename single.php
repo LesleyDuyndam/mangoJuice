@@ -4,14 +4,15 @@ get_template_part( 'modules/module', 'header' );
 
     while (have_posts()) : the_post(); ?>
 
+        <div id="img-header" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>');">
+
+        </div>
+
         <section class="single-post">
             <header>
 
-
-                <?php the_post_thumbnail(); ?>
-
                 <h3><?php the_title(); ?></h3>
-
+                <time><?php the_date(); ?></time>
             </header>
 
             <?php get_template_part( 'snippets/snippet', 'bread_crumb'); ?>
