@@ -38,9 +38,9 @@ get_template_part( 'modules/module', 'header' );
 
             <?php get_sidebar() ;?>
 
-        </section>
+            <?php get_template_part( 'snippets/snippet', 'bread_crumb'); ?>
 
-        <?php get_template_part( 'snippets/snippet', 'bread_crumb'); ?>
+        </section>
 
     <?php endwhile; ?>
 

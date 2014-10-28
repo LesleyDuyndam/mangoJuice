@@ -116,9 +116,7 @@ footer section h3 {
     border-bottom: 5px solid #72a099; }
 
 section.breadcrumbs {
-  background-color: white;
-  padding: 25px;
-  margin: 75px 0 25px;
+  padding: 100px 0 25px;
   display: block !important; }
   section.breadcrumbs div {
     display: inline-block;
@@ -247,6 +245,7 @@ ul.card-mini li {
     width: 55%;
     padding: 0 5% !important; }
   ul.card-mini li img {
+    text-align: right;
     width: 33.5%; }
 
 /* The footer styles */
@@ -377,9 +376,6 @@ section.single-post-page {
       section.single-post-page > article > p:first-child {
         font-size: 1.3em;
         font-weight: 400; }
-  section.single-post-page aside {
-    float: right;
-    top: 0; }
   section.single-post-page #disqus_thread {
     padding: 0 5%; }
   section.single-post-page h3 {
@@ -414,13 +410,11 @@ section.single-post-page {
     font-weight: 400;
     font-size: 0.9em; }
 
-.desktop .single-post-page > article, .desktop .single-post-page > footer {
+.desktop .single-post-page > article, .desktop .single-post-page > footer, .desktop .single-post-page > aside {
   display: inline-block;
-  width: 60%; }
+  width: 70%; }
 .desktop .single-post-page > aside {
-  margin-left: 10%;
-  display: inline-block;
-  width: 26%; }
+  width: 100%; }
   .desktop .single-post-page > aside h1 {
     font-size: 2em;
     padding: 50px 0 25px; }
