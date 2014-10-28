@@ -2,7 +2,7 @@
 /** The posts template file */
 ?>
 
-<li itemscope itemtype="" >
+<li itemscope itemtype="">
 
     <h4 itemprop="name" ><?php the_title(); ?></h4>
 

@@ -24,25 +24,24 @@ get_template_part( 'modules/module', 'header' );
                 </ul>
             </header>
 
-            <?php get_template_part( 'snippets/snippet', 'bread_crumb'); ?>
-
             <article>
 
 		        <?php echo the_content() ;?>
 
 	        </article>
 
-            <?php get_sidebar() ;?>
-
 	        <footer>
 
-                <section>
-
                     <?php comments_template(); ?>
-                </section>
 
 	        </footer>
+
+            <?php get_sidebar() ;?>
+
         </section>
+
+        <?php get_template_part( 'snippets/snippet', 'bread_crumb'); ?>
+
     <?php endwhile; ?>
 
 <?php get_template_part( 'modules/module', 'footer' ) ;?>

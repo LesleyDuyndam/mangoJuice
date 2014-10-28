@@ -26,7 +26,7 @@ class mangoJuice_more_posts_Widget extends WP_Widget {
 
 
         //  Get the posts Query
-        $my_query = new WP_Query( 'category_name=portfolio&posts_per_page=3' );
+        $my_query = new WP_Query( 'category_name=portfolio' );
         //  Initialize a counter
         $count = 0;
 
