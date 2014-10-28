@@ -2,11 +2,17 @@
   body
     padding-top: 75px
 
-  body > section
+  body > section > header,
+  body > section > article,
+  body > section > footer
     width: $width-mobile
+
 
   body > section > header
     padding: 0 0 $padding-mobile-vertical
+
+  aside
+    padding: 4%
 
 .tablet .portrait
   body > section
@@ -26,6 +32,9 @@
 body
   background-color: $primary-light
 
+body > section > header,
+body > section > article,
+body > section > footer,
 body > section,
 body > footer
   padding-top: 150px

@@ -5,6 +5,6 @@
 
 <section class="breadcrumbs">
 
-    <?php mangoJuice_breadcrumbs( " > " ) ;?>
+    <?php mangoJuice_breadcrumbs( " / " ) ;?>
 
 </section>

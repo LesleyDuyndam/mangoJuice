@@ -10,9 +10,9 @@ if( ! function_exists( 'mangoJuice_widgets_init' ) ){
      */
     function mangoJuice_widgets_init() {
         register_sidebar( array(
-            'name'          => 'Bottom sidebar',
-            'id'            => "bottom",
-            'description'   => 'bottom',
+            'name'          => 'Main sidebar',
+            'id'            => "main",
+            'description'   => 'The main responsive sidebar',
             'class'         => '',
             'before_widget' => '<li>',
             'after_widget'  => '</li>',

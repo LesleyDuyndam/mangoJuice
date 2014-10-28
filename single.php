@@ -8,11 +8,20 @@ get_template_part( 'modules/module', 'header' );
 
         </div>
 
-        <section class="single-post">
+        <section class="single-post-page">
             <header>
 
                 <h3><?php the_title(); ?></h3>
-                <time><?php the_date(); ?></time>
+
+                <ul>
+                    <li>
+                        <img src="<?php echo get_template_directory_uri() ;?>/svg/icons/clock.svg" alt=""/><time><?php the_date(); ?></time>
+                    </li>
+                    <li>
+<!--                        @todo Create function to add link in the post backend-->
+                        <img src="<?php echo get_template_directory_uri() ;?>/svg/icons/link.svg" alt=""/><a class="live-website" href="<?php echo "#" ;?>">www.lesleyduyndam.nl</a>
+                    </li>
+                </ul>
             </header>
 
             <?php get_template_part( 'snippets/snippet', 'bread_crumb'); ?>
@@ -23,15 +32,12 @@ get_template_part( 'modules/module', 'header' );
 
 	        </article>
 
+            <?php get_sidebar() ;?>
+
 	        <footer>
 
-		        <?php if(true) : ?>
-			        <a href="<?php echo "#" ;?>">Bekijk de live website!</a>
-		        <?php endif; ?>
-
-                    <?php get_template_part( 'snippets/snippet', 'page_navigation' ) ;?>
-
                 <section>
+
                     <?php comments_template(); ?>
                 </section>
 

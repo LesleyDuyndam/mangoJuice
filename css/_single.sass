@@ -1,22 +1,81 @@
 section
-  &.single-post
+  &.single-post-page
     padding-top: 0
 
+    & > article
+      padding: 50px 0
+      & > p
+        padding: 20px 20px
+        &:first-child
+          padding-top: 0
+          font-size: 1.3em
+          font-weight: 400
+
     h3
-      padding: 30px 0
+      padding: 75px 20px
 
-section
-  &.breadcrumbs
-    background-color: $primary-light_accent
-    width: 90%
-    padding: 50px 5%
-    overflow: scroll
-    //scrollbar
+    h4,
+    h5,
+    h6
+      padding: 20px 20px
 
-    div
+    header
+      ul
+        padding: 0 20px
+
+      li
+        padding: 7.5px 0
+        a,
+        time
+          display: inline-block
+          vertical-align: middle
+          text-decoration: none
+          font-style: italic
+        img
+          display: inline-block
+          vertical-align: middle
+          width: 20px
+          height: auto
+          margin: 0 15px 0 0
+
+    .wp-caption
+      margin: 50px 0 25px
+      width: 100% !important
+      height: auto
+
+    p
+      &.wp-caption-text
+        padding: 10px 0
+        font-style: italic
+        font-weight: 400
+        font-size: 0.9em
+
+.desktop
+  .single-post-page
+    & > article,
+    & > footer
       display: inline-block
+      width: 60%
 
-      &:first-child
-        margin-left: -200%
-        width: 300%
-        text-align: right
+    & > aside
+      margin-left: 10%
+      display: inline-block
+      width: 26%
+
+      h1
+        font-size: 2em
+        padding: 50px 0 25px
+
+      .card
+        width: 100%
+        box-shadow: none
+        margin-bottom: 50px
+
+        p
+          padding: 10px 0
+
+        a
+          padding: 10px 0
+
+        h4
+          padding: 50px 10px

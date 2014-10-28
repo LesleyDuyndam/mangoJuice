@@ -183,7 +183,7 @@ if( ! function_exists('mangoJuice_breadCrumbs')) {
             } else {
 
                 if( is_string( $crumbs[$i]['url'] ) ){
-                    $crumbleTrack .= "<div itemprop='child' itemscope itemtype='http://data-vocabulary.org/Breadcrumb'><a href=" . $crumbs[$i]['url'] . " itemprop='url' ><span itemprop='title'>" . $crumbs[$i]['name'] . "</span></a>" . $spacer;
+                    $crumbleTrack .= "<div itemprop='child' itemscope itemtype='http://data-vocabulary.org/Breadcrumb'><a href=" . $crumbs[$i]['url'] . " itemprop='url' ><span itemprop='title'>" . $crumbs[$i]['name'] . "</span></a> " . $spacer;
 
                 } else {
                     $crumbleTrack .= "<div itemprop='child' itemscope itemtype='http://data-vocabulary.org/Breadcrumb'><span itemprop='title'>" .$crumbs[$i]['name'] . "</span>";

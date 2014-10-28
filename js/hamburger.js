@@ -43,6 +43,9 @@ jQuery( function(){
         jQuery( ' header#header h2 ' )
             .remove();
 
+        jQuery( ' section.breadcrumbs ' )
+            .remove();
+
 
         /**
          *
