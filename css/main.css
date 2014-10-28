@@ -60,9 +60,13 @@ img {
 
 .single-post #img-header {
   width: 100%;
-  height: 400px;
-  background-size: cover; }
-.single-post h3 {
+  height: 300px;
+  background-size: cover;
+  background-position: 50%; }
+
+.desktop .single-post #img-header {
+  height: 500px; }
+.desktop h3 {
   font-size: 3em; }
 
 /*  FONT IMPORT */
@@ -365,13 +369,12 @@ section.single-post-page {
   padding-top: 0; }
   section.single-post-page > article {
     margin: 50px 0 75px;
-    padding: 50px 0;
+    padding: 75px 0;
     background-color: white;
     box-shadow: 0 0 7px rgba(100, 100, 100, 0.2); }
     section.single-post-page > article > p {
-      padding: 20px 20px; }
+      padding: 20px 40px; }
       section.single-post-page > article > p:first-child {
-        padding-top: 0;
         font-size: 1.3em;
         font-weight: 400; }
   section.single-post-page aside {
@@ -380,13 +383,13 @@ section.single-post-page {
   section.single-post-page #disqus_thread {
     padding: 0 5%; }
   section.single-post-page h3 {
-    padding: 75px 20px; }
+    padding: 75px 40px; }
   section.single-post-page h4,
   section.single-post-page h5,
   section.single-post-page h6 {
-    padding: 20px 20px; }
+    padding: 20px 40px; }
   section.single-post-page header ul {
-    padding: 0 20px; }
+    padding: 0 40px; }
   section.single-post-page header li {
     padding: 7.5px 0; }
     section.single-post-page header li a,
@@ -406,7 +409,7 @@ section.single-post-page {
     width: 100% !important;
     height: auto; }
   section.single-post-page p.wp-caption-text {
-    padding: 10px 0;
+    padding: 20px 40px;
     font-style: italic;
     font-weight: 400;
     font-size: 0.9em; }
