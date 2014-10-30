@@ -8,9 +8,12 @@ section
       background-color: rgba(255, 255, 255, 1)
       box-shadow: $background
       & > p
-        padding: 20px 40px
+        font-size: 1.2em
+        padding: 25px 20px
+        letter-spacing: 0.03em
+        line-height: 1.5em
         &:first-child
-          font-size: 1.3em
+          font-size: 1.4em
           font-weight: 400
 
     #disqus_thread
@@ -22,7 +25,7 @@ section
       //padding: 0 2.5% 75px
 
     h3
-      padding: 75px 40px
+      padding: 75px 72px 0
 
     h4,
     h5,
@@ -31,10 +34,11 @@ section
 
     header
       ul
-        padding: 0 40px
+        padding: 25px 80px 75px
 
       li
-        padding: 7.5px 0
+        padding: 7.5px 30px 7.5px 0
+
         a,
         time
           display: inline-block
@@ -49,19 +53,41 @@ section
           margin: 0 15px 0 0
 
     .wp-caption
-      margin: 50px 0 25px
+      margin: 50px 0 0
       width: 100% !important
       height: auto
 
     p
       &.wp-caption-text
-        padding: 20px 40px
+        padding: 75px 80px 75px 150px
+        //background: rgba(245, 245, 245, 1)
         font-style: italic
         font-weight: 400
-        font-size: 0.9em
+        font-size: 2em
+        background-image: url("../svg/icons/picture.svg")
+        background-size: 30px auto
+        background-position: 80px 81px
+        background-repeat: no-repeat
 
 .desktop
   .single-post-page
+
+    & > article
+      & > p
+        font-size: 1.3em
+        padding: 25px 80px
+        letter-spacing: 0.05em
+        line-height: 1.8em
+        &:first-child
+          font-size: 1.6em
+          font-weight: 400
+
+    h3
+      font-size: 6.5em
+
+    li
+      display: inline-block
+
     & > article,
     & > footer,
     & > aside

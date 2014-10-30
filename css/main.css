@@ -372,22 +372,25 @@ section.single-post-page {
     background-color: white;
     box-shadow: 0 0 7px rgba(100, 100, 100, 0.2); }
     section.single-post-page > article > p {
-      padding: 20px 40px; }
+      font-size: 1.2em;
+      padding: 25px 20px;
+      letter-spacing: 0.03em;
+      line-height: 1.5em; }
       section.single-post-page > article > p:first-child {
-        font-size: 1.3em;
+        font-size: 1.4em;
         font-weight: 400; }
   section.single-post-page #disqus_thread {
     padding: 0 5%; }
   section.single-post-page h3 {
-    padding: 75px 40px; }
+    padding: 75px 72px 0; }
   section.single-post-page h4,
   section.single-post-page h5,
   section.single-post-page h6 {
     padding: 20px 40px; }
   section.single-post-page header ul {
-    padding: 0 40px; }
+    padding: 25px 80px 75px; }
   section.single-post-page header li {
-    padding: 7.5px 0; }
+    padding: 7.5px 30px 7.5px 0; }
     section.single-post-page header li a,
     section.single-post-page header li time {
       display: inline-block;
@@ -401,15 +404,31 @@ section.single-post-page {
       height: auto;
       margin: 0 15px 0 0; }
   section.single-post-page .wp-caption {
-    margin: 50px 0 25px;
+    margin: 50px 0 0;
     width: 100% !important;
     height: auto; }
   section.single-post-page p.wp-caption-text {
-    padding: 20px 40px;
+    padding: 75px 80px 75px 150px;
     font-style: italic;
     font-weight: 400;
-    font-size: 0.9em; }
+    font-size: 2em;
+    background-image: url("../svg/icons/picture.svg");
+    background-size: 30px auto;
+    background-position: 80px 81px;
+    background-repeat: no-repeat; }
 
+.desktop .single-post-page > article > p {
+  font-size: 1.3em;
+  padding: 25px 80px;
+  letter-spacing: 0.05em;
+  line-height: 1.8em; }
+  .desktop .single-post-page > article > p:first-child {
+    font-size: 1.6em;
+    font-weight: 400; }
+.desktop .single-post-page h3 {
+  font-size: 6.5em; }
+.desktop .single-post-page li {
+  display: inline-block; }
 .desktop .single-post-page > article, .desktop .single-post-page > footer, .desktop .single-post-page > aside {
   display: inline-block;
   width: 70%; }

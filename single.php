@@ -15,7 +15,7 @@ get_template_part( 'modules/module', 'header' );
 
                 <ul>
                     <li>
-                        <img src="<?php echo get_template_directory_uri() ;?>/svg/icons/clock.svg" alt=""/><time><?php the_date(); ?></time>
+                        <img src="<?php echo get_template_directory_uri() ;?>/svg/icons/clock.svg" alt=""/><time><?php the_date(); ?>,</time>
                     </li>
                     <li>
 <!--                        @todo Create function to add link in the post backend-->
