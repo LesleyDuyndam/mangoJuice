@@ -4,7 +4,7 @@ get_template_part( 'modules/module', 'header' );
 
     while (have_posts()) : the_post(); ?>
 
-        <div id="img-header" style=" background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>') "></div>
+        <div id="img-header" style=" background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>') "><div class="gradient"></div></div>
 
         <section>
             <header>

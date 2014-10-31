@@ -14,13 +14,15 @@
   aside
     padding: 4%
 
-.tablet .portrait
-  body > section
-    width: $width-tablet-portrait
+.tablet
+  &.portrait
+    body > section
+      width: $width-tablet-portrait
 
-.tablet .landscape
-  body > section
-    width: $width-tablet-landscape
+.tablet
+  & .landscape
+    body > section
+      width: $width-tablet-landscape
 
 .desktop
   body > section,

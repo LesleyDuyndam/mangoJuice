@@ -27,8 +27,8 @@ header#header a, nav a {
 .mobile aside {
   padding: 4%; }
 
-.tablet .portrait body > section {
-  width: 95%; }
+.tablet.portrait body > section {
+  width: 90%; }
 
 .tablet .landscape body > section {
   width: 90%; }
@@ -164,11 +164,13 @@ header#header {
     border: none;
     cursor: pointer; }
 
-.tablet .landscape header#header a, .desktop header#header a {
+.tablet header#header a,
+.desktop header#header a {
   display: block;
   width: auto;
   height: auto; }
-.tablet .landscape header#header li, .desktop header#header li {
+.tablet header#header li,
+.desktop header#header li {
   display: inline-block; }
 
 #intro {
@@ -344,8 +346,9 @@ footer#footer h3 {
     color: #443f35;
     background-image: url("../svg/icons/checkboxmark.svg"); }
 
-.tablet .portrait footer#footer #find-me,
-.tablet .portrait footer#footer #talk-to-me, .desktop footer#footer #find-me,
+.tablet footer#footer #find-me,
+.tablet footer#footer #talk-to-me,
+.desktop footer#footer #find-me,
 .desktop footer#footer #talk-to-me {
   vertical-align: top;
   display: inline-block;
@@ -354,7 +357,8 @@ footer#footer h3 {
   padding: 10%;
   margin: 0;
   border: 0; }
-.tablet .portrait footer#footer #talk-to-me img, .desktop footer#footer #talk-to-me img {
+.tablet footer#footer #talk-to-me img,
+.desktop footer#footer #talk-to-me img {
   width: 40%;
   margin-top: 15px; }
 
@@ -366,6 +370,10 @@ footer#footer h3 {
   z-index: -10;
   background-size: cover;
   background-position: 50%; }
+.single-post .gradient {
+  width: 100%;
+  height: 100%;
+  transition: 1s; }
 .single-post > section {
   padding-top: 0;
   letter-spacing: 0.04em;
@@ -429,7 +437,7 @@ footer#footer h3 {
 
 .tablet .single-post #img-header,
 .desktop .single-post #img-header {
-  height: 500px; }
+  height: 800px; }
 .tablet .single-post h3,
 .desktop .single-post h3 {
   font-size: 3em; }
