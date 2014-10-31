@@ -120,6 +120,7 @@ include_once "functions/the_excerpt.php";
  * Add theme controllers
  */
 include_once "controllers/bread_crumb.php";
+include_once "controllers/diasable-img-auto-p.php";
 
 
 include_once "widgets/more_posts.php";

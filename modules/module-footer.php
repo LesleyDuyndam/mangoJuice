@@ -8,35 +8,30 @@
                 <a href="http://www.facebook.com">
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/icons/facebook31.svg" alt="Lesley's facebook"/>
                 </a>
-            </li>
-            <li>
+            </li><li>
                 <a href="http://www.linkedin.com">
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/icons/linkedin11.svg" alt="Lesley's Linkedin"/>
                 </a>
-            </li>
-            <li>
+            </li><li>
                 <a href="http://www.twitter.com">
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/icons/twitter21.svg" alt="Lesley's Twitter"/>
                 </a>
-            </li>
-            <li>
+            </li><li>
                 <a href="http://www.github.com">
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/icons/github13.svg" alt="Lesley's Github"/>
                 </a>
             </li>
         </ul>
     </section><section id="talk-to-me">
-        <h3>Neem contact op met mij via</h3>
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/LesleyDuyndam_head.svg" id="footer_logo" alt="Lesley Duyndam logo"/>
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/LesleyDuyndam-black.svg" id="footer_logo" alt="Lesley Duyndam logo"/>
         <ul>
-            <li><h4>Lesley Duyndam</h4></li>
             <li>
                 <a href="mailto:info@lesleyduyndam.nl?subject=Hoi Lesley!">
                     info@lesleyduyndam.nl
                 </a>
             </li>
             <li>+316 4546 0121</li>
-            <li><h5>Postadres</h5></li>
+            <li><h4>Postadres</h4></li>
             <li>Professor Verbernelaan 112-06</li>
             <li>5037AK, Tilburg</li>
         </ul>

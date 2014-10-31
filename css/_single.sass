@@ -1,42 +1,46 @@
-section
-  &.single-post-page
+.single-post
+  #img-header
+    width: 100%
+    height: 300px
+    position: fixed
+    z-index: -10
+    background-size: cover
+    background-position: 50%
+
+  & > section
     padding-top:        0
     letter-spacing:   0.04em
     line-height:      1.5em
 
-    & > article
-      margin:           0
-      padding:          50px 0
-      background-color: rgba(255, 255, 255, 1)
-      p
-        &:first-child
-          font-size:      1.4em
-          font-weight:    400
-
-    p, h1, h2, h3, h4, h5, h6
+    p, h1, h2, h3
       padding:          25px 20px
 
+    h4, h5, h6
+      padding:          25px 20px 0
     h3
       font-size: 2em
+      line-height: 1.3em
 
-    header
-      margin: 50px 0
+    & > header,
+    & > footer,
+    & > aside
+      background-color: $primary-light
+
+
+    & > header
+      margin: 300px 0 0
+      box-shadow: $background
 
       ul
         padding: 0 20px
-
       li
         padding: 3px 0
-
-      a,
-      time
+      a, time
         display:        inline-block
         vertical-align: middle
 
         font-size:      0.8em
         font-style:     italic
-        text-decoration: none
-
       img
         display:        inline-block
         vertical-align: middle
@@ -45,82 +49,133 @@ section
         height:         auto
         margin:         0 10px 0 0
 
-    .wp-caption
-      padding:          25px 0
-      width:            100% !important
 
-    p.wp-caption-text
-      padding: 75px 80px 75px 150px
-      font-style: italic
-      font-weight: 400
-      font-size: 2em
-      background-image: url("../svg/icons/picture.svg")
-      background-size: 30px auto
-      background-position: 80px 81px
-      background-repeat: no-repeat
+
+
+    & > article
+      margin:           0
+      padding:          50px 0
+      background-color: rgba(255, 255, 255, 1)
+
+      p
+        font-size:          1em
+
+        &:first-child
+          font-size:        1.1em
+          font-weight:      400
+
+      img
+        padding:          25px 0
+      .wp-caption
+        padding:          25px 0 0
+        width:            100% !important
+      .wp-caption-text
+        padding:          25px 20px 25px 60px
+        font-style:       italic
+        font-weight:      400
+        font-size:        1.5em
+        line-height:      1.2em
+        background-image: url("../svg/icons/picture.svg")
+        background-size:  20px auto
+        background-position: 20px 50%
+        background-repeat: no-repeat
+
+
+
+
+    & > aside
+
+      h3
+        font-size:  2em
+        padding:    12.5px 0 !important
+
+    & > footer
+
+      #disqus_thread
+        padding:  75px 20px 55px
+
 
 
 .tablet,
 .desktop
-  .single-post-page
-
+  .single-post
+    #img-header
+      height: 500px
     h3
-      padding: 75px 72px 0
-      font-size: 6.5em
+      font-size: 3em
 
-    ul
-      padding: 72px 82px 0
+    & > section
+      p, h1, h2, h3
+        padding:          78px 80px
+      h4, h5, h6
+        padding:          75px 80px 0
+      h3
+        line-height: 1.3em
+        font-size: 6.5em
+      ul
+        padding: 72px 82px 0
 
-    li
-      display: inline-block
+      #disqus_thread
+        padding: 75px 0
 
-    & > article
-      margin: 50px 0 75px
-      box-shadow: $background
+      & > header
+        a, time
+          font-size: 1.1em
 
-      & > p
-        font-size: 1.3em
-        padding: 25px 80px
-        letter-spacing: 0.05em
-        line-height: 1.8em
+        img
+          width: 20px
 
-        &:first-child
-          font-size: 1.6em
-          font-weight: 400
+      & > article,
+      & > footer
+        margin:         50px 0 75px
+
+      & > article
+        padding:        100px 0
+        box-shadow:     $background
+        p
+          font-size:      1.3em
+          padding:        25px 80px
+          letter-spacing: 0.05em
+          line-height:    1.8em
+          &:first-child
+            font-size:      1.6em
+            font-weight:    400
+        .wp-caption
+          padding:        25px 0
+        .wp-caption-text
+          padding:        75px 80px 75px 150px
+          font-style:     italic
+          font-weight:    400
+          font-size:      2em
+          background-size: 30px auto
+          background-position: 80px 50%
 
 
 
 .desktop
-  .single-post-page
-    h3
-      font-size: 6.5em
+  .single-post
+    & > section
+      h3
+        font-size: 6.5em
 
-    li
-      display: inline-block
+      & > article,
+      & > footer,
+      & > aside
+        width: 75%
 
-    & > article,
-    & > footer,
-    & > aside
-      display: inline-block
-      width: 70%
+      & > aside
+        ul
+          li
+            .card
+              width: 100%
+              box-shadow: none
+              margin-bottom: 50px
 
-    & > aside
-      width: 100%
+              p
+                padding: 10px 0
 
-      h1
-        font-size: 2em
-        padding: 50px 0 25px
+              a
+                padding: 10px 0
 
-      .card
-        width: 100%
-        box-shadow: none
-        margin-bottom: 50px
-
-        p
-          padding: 10px 0
-
-        a
-          padding: 10px 0
-
-        h4
-          padding: 50px 10px
+              h4
+                padding: 50px 10px

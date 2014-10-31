@@ -22,30 +22,41 @@ class mangoJuice_more_posts_Widget extends WP_Widget {
 
     function widget($args, $instance) {
 
-        $args['title'] = $instance['title'];
 
+        $mangoJuice_article = [
+            "id"        => get_the_ID(),
+            "category"  => get_category( get_the_category()[0]->parent )
+        ];
+
+        echo $instance['title'];
+
+        if( $instance['title'] != NULL ){
+            $args['title'] = $instance['title'];
+        } else {
+            $args['title'] = $mangoJuice_article['category']->name;
+        }
 
         //  Get the posts Query
-        $my_query = new WP_Query( 'category_name=portfolio' );
-        //  Initialize a counter
-        $count = 0;
+        $my_query = new WP_Query( 'category_name=' . $mangoJuice_article['category']->slug );
 
+        echo "<li><header>";
+        echo "<h3>" . $args['title'] . "</h3>";
+        echo "<a href='" . esc_url(get_category_link(get_cat_ID( $mangoJuice_article['category']->slug ))) . "' class='more'> MEER </a>";
+        echo "</header>";
+            echo "<ul class='card-mini'>";
 
-        echo "<li>";
-        echo "<h1>" . $args['title'] . "</h1>";
-        echo "<ul class='card-mini'>";
-        //  Loop trough the post query
-        while ( $my_query->have_posts() ) : $my_query->the_post();
+            //  Loop trough the post query
+            while ( $my_query->have_posts() ) : $my_query->the_post();
 
-            //  Update the counter
-            $count++;
+                if( get_the_ID() != $mangoJuice_article['id'] ){
 
-            //  Print the post data in the preset format
-            get_template_part( 'modules/module', 'card_mini');
+                    //  Print the post data in the preset format
+                    get_template_part( 'modules/module', 'card_mini');
 
-        endwhile;
+                }
+            endwhile;
 
-        echo "</ul>";
+            echo "</ul>";
         echo "</li>";
 
         // outputs the content of the widget
