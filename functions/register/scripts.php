@@ -22,6 +22,7 @@ function mangoJuice_add_scripts() {
 
     wp_register_script('mangoJuice_hamburger', get_stylesheet_directory_uri() . '/js/hamburger.js', array(), "1.0.1", true);
     wp_register_script('mangoJuice_intro',     get_stylesheet_directory_uri() . '/js/intro.js', array(), "1.0.1", true);
+    wp_register_script('mangoJuice_scroll_actions', get_stylesheet_directory_uri() . '/js/scroll_actions.js', array(), "1.0.1", true);
 
     wp_register_script('mangoJuice_main',      get_stylesheet_directory_uri() . '/js/main.js', array(), "1.0.1", true);
 
@@ -45,6 +46,7 @@ function mangoJuice_add_scripts() {
     wp_enqueue_script( 'mangoJuice_setup');
     wp_enqueue_script( 'mangoJuice_hamburger');
     wp_enqueue_script( 'mangoJuice_intro');
+    wp_enqueue_script( 'mangoJuice_scroll_actions');
     wp_enqueue_script( 'mangoJuice_main');
 
 
