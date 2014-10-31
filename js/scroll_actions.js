@@ -15,7 +15,7 @@ jQuery( window )
 
         scroll.track = window.scrollY;
 
-        if( scroll.track < stop && scroll.track >= 0  ) {
+        if( scroll.track < stop ) {
             scroll.track = ( -1 * scroll.track ) * scroll.speed;
 
             scroll.object

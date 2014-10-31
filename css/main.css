@@ -28,7 +28,7 @@ header#header a, nav a {
   padding: 4%; }
 
 .tablet.portrait body > section {
-  width: 90%; }
+  width: 100%; }
 
 .tablet .landscape body > section {
   width: 90%; }
@@ -119,6 +119,13 @@ section.breadcrumbs {
   height: auto;
   min-height: 75px;
   z-index: 100; }
+  .mobile header#header a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 15px 10%; }
+    .mobile header#header a:hover, .mobile header#header a:visited {
+      color: #f8f8f8; }
 
 header#header {
   background-color: #72a099;
@@ -148,13 +155,6 @@ header#header {
     border-top: 1px solid rgba(118, 113, 103, 0.1); }
     header#header li:hover {
       background-color: rgba(118, 113, 103, 0.1); }
-    header#header li a {
-      display: block;
-      width: 100%;
-      height: 100%;
-      padding: 15px 10%; }
-      header#header li a:hover, header#header li a:visited {
-        color: #f8f8f8; }
   header#header img#navigation_button {
     position: fixed;
     top: 20px;
@@ -164,14 +164,22 @@ header#header {
     border: none;
     cursor: pointer; }
 
-.tablet header#header a,
-.desktop header#header a {
-  display: block;
-  width: auto;
-  height: auto; }
-.tablet header#header li,
-.desktop header#header li {
+.tablet header#header h1, .tablet header#header h2, .tablet header#header nav, .desktop header#header h1, .desktop header#header h2, .desktop header#header nav {
   display: inline-block; }
+.tablet header#header h2, .desktop header#header h2 {
+  padding: 33px 0;
+  font-size: 0.8em; }
+.tablet header#header nav, .desktop header#header nav {
+  position: absolute;
+  right: 0;
+  top: 0; }
+.tablet header#header li, .desktop header#header li {
+  display: inline-block;
+  padding: 30px 30px;
+  min-width: 100px;
+  text-align: center;
+  margin: 0 -4px;
+  border-left: 1px solid rgba(120, 120, 120, 0.3); }
 
 #intro {
   text-align: center; }
@@ -441,13 +449,13 @@ footer#footer h3 {
 .tablet .single-post h3,
 .desktop .single-post h3 {
   font-size: 3em; }
-.tablet .single-post > section p, .tablet .single-post > section h1, .tablet .single-post > section h2, .tablet .single-post > section h3,
+.tablet .single-post > section p, .tablet .single-post > section h1, .tablet .single-post > section h2,
 .desktop .single-post > section p,
 .desktop .single-post > section h1,
-.desktop .single-post > section h2,
-.desktop .single-post > section h3 {
+.desktop .single-post > section h2 {
   padding: 78px 80px; }
-.tablet .single-post > section h4, .tablet .single-post > section h5, .tablet .single-post > section h6,
+.tablet .single-post > section h3, .tablet .single-post > section h4, .tablet .single-post > section h5, .tablet .single-post > section h6,
+.desktop .single-post > section h3,
 .desktop .single-post > section h4,
 .desktop .single-post > section h5,
 .desktop .single-post > section h6 {
@@ -458,7 +466,7 @@ footer#footer h3 {
   font-size: 6.5em; }
 .tablet .single-post > section ul,
 .desktop .single-post > section ul {
-  padding: 72px 82px 0; }
+  padding: 50px 82px 150px; }
 .tablet .single-post > section #disqus_thread,
 .desktop .single-post > section #disqus_thread {
   padding: 75px 0; }
@@ -472,7 +480,7 @@ footer#footer h3 {
 .tablet .single-post > section > article, .tablet .single-post > section > footer,
 .desktop .single-post > section > article,
 .desktop .single-post > section > footer {
-  margin: 50px 0 75px; }
+  margin: 0; }
 .tablet .single-post > section > article,
 .desktop .single-post > section > article {
   padding: 100px 0;

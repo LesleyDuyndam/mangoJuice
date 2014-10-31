@@ -7,6 +7,15 @@
     min-height: 75px
     z-index: 100
 
+    a
+      display: block
+      width: 100%
+      height: 100%
+      padding: 15px 10%
+      &:hover, &:visited
+        color: $primary-light
+
+
 header#header
   background-color: $secondary-1
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1)
@@ -47,15 +56,6 @@ header#header
       background-color: $accent
 
 
-    a
-      display: block
-      width: 100%
-      height: 100%
-      padding: 15px 10%
-      &:hover, &:visited
-        color: $primary-light
-
-
   img#navigation_button
     position: fixed
     top:    20px
@@ -65,13 +65,25 @@ header#header
     border: none
     cursor: pointer
 
-.tablet,
-.desktop
+.tablet, .desktop
   header#header
-    a
-      display: block
-      width: auto
-      height: auto
+
+    h1, h2, nav
+      display: inline-block
+
+    h2
+      padding: 33px 0
+      font-size: 0.8em
+
+    nav
+      position: absolute
+      right: 0
+      top: 0
 
     li
       display: inline-block
+      padding: 30px 30px
+      min-width: 100px
+      text-align: center
+      margin: 0 -4px
+      border-left: 1px solid rgba(120, 120, 120, 0.3)
