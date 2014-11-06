@@ -40,8 +40,8 @@ jQuery( function(){
         jQuery(' header#header ' )
             .append( "<img src='" + wordpress.template_url + "/svg/burger.svg' id='navigation_button' alt='Burger icon' />" );
 
-        jQuery( ' header#header h2 ' )
-            .remove();
+        //jQuery( ' header#header h2 ' )
+        //    .remove();
 
         jQuery( ' section.breadcrumbs ' )
             .remove();

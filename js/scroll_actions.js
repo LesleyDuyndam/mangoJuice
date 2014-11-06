@@ -1,4 +1,3 @@
-
 var scroll = {
         "track" :   window.scrollY,
         "object":   jQuery( ' #img-header ' ),
@@ -13,10 +12,12 @@ if ( device.tablet() || device.desktop() ){
 jQuery( window )
     .scroll( function(){
 
-        scroll.track = window.scrollY;
+        //scroll.track = window.scrollY;
+
+        scroll.track = jQuery(this).scrollTop();
 
         if( scroll.track < stop ) {
-            scroll.track = ( -1 * scroll.track ) * scroll.speed;
+            scroll.track = Math.round(( -1 * scroll.track ) * scroll.speed);
 
             scroll.object
                 .css({

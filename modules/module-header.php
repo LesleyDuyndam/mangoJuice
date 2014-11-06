@@ -42,34 +42,39 @@
 <body id="body" <?php body_class(); ?>>
     <!-- START HEADER -->
     <header id="header">
-        <h1><a href="<?php echo get_home_url();?>"><?php bloginfo('name'); ?></a></h1>
-        <h2><?php bloginfo('description'); ?></h2>
-        <nav role="navigation">
-            <!-- START MAIN NAVIGATION -->
-            <?php
+        <div id="header_wrapper">
+            <a href="<?php echo get_home_url();?>" id="title_link">
+                <img id="header_icon" src="<?php echo get_template_directory_uri() ;?>/svg/icons/header_icon.svg" alt=""/><div id="title">
+                    <h1><?php bloginfo('name'); ?></h1>
+                    <h2><?php bloginfo('description'); ?></h2>
+                </div>
+            </a>
+            <nav role="navigation">
+                <!-- START MAIN NAVIGATION -->
+                <?php
 
-            $menu_settings = array(
-            'theme_location'  => 'Main',
-            'menu'            => '',
-            'container'       => false,           // Set to NAV if nog in container
-            'container_class' => '',
-            'container_id'    => '',
-            'menu_class'      => 'menu',
-            'menu_id'         => '',
-            'echo'            => true,              // If false, teruns a STRING
-            'fallback_cb'     => 'wp_page_menu',
-            'before'          => '',               // Inside the <li>, before the <a>
-            'after'           => '',                // Inside the <li>, after the <a>
-            'link_before'     => '',
-            'link_after'      => '',
-            'items_wrap'      => '<ul class="menu">%3$s</ul>',
-            'depth'           => 0,
-            'walker'          => ''
-            );
+                $menu_settings = array(
+                'theme_location'  => 'Main',
+                'menu'            => '',
+                'container'       => false,           // Set to NAV if nog in container
+                'container_class' => '',
+                'container_id'    => '',
+                'menu_class'      => 'menu',
+                'menu_id'         => '',
+                'echo'            => true,              // If false, teruns a STRING
+                'fallback_cb'     => 'wp_page_menu',
+                'before'          => '',               // Inside the <li>, before the <a>
+                'after'           => '',                // Inside the <li>, after the <a>
+                'link_before'     => '',
+                'link_after'      => '',
+                'items_wrap'      => '<ul class="menu">%3$s</ul>',
+                'depth'           => 0,
+                'walker'          => ''
+                );
 
-            wp_nav_menu( $menu_settings );
+                wp_nav_menu( $menu_settings );
 
-                ?><!-- END MAIN NAVIGATION -->
-        </nav>
-
+                    ?><!-- END MAIN NAVIGATION -->
+            </nav>
+        </div>
     </header>

@@ -1,5 +1,5 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-        <line stroke="rgba(248, 248, 248, 1)" x1="2" y1="27.5" x2="33" y2="27.5"></line>
-        <line stroke="rgba(248, 248, 248, 1)" x1="2" y1="17.5" x2="33" y2="17.5"></line>
-        <line stroke="rgba(248, 248, 248, 1)" x1="2" y1="7.5" x2="33" y2="7.5"></line>
+        <line stroke="rgba(124, 176, 169, 1)" x1="2" y1="27.5" x2="33" y2="27.5"></line>
+        <line stroke="rgba(124, 176, 169, 1)" x1="2" y1="17.5" x2="33" y2="17.5"></line>
+        <line stroke="rgba(124, 176, 169, 1)" x1="2" y1="7.5" x2="33" y2="7.5"></line>
 </svg>

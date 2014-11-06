@@ -15,10 +15,28 @@
       &:hover, &:visited
         color: $primary-light
 
+  div#title
+    display: inline-block
+
+  h1
+    font-size: 1.2em
+    padding: 16px 12px 0
+
+  h2
+    font-size: 1.1em
+    padding: 5px 12px 0
+
+  a#title_link
+    padding: 0 !important
+
+  img#header_icon
+    width: auto !important
+    height: 75px !important
+
 
 header#header
-  background-color: $secondary-1
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1)
+  background-color: $primary-light
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3)
   &.closed
     ul
       margin-top: -340px
@@ -28,24 +46,20 @@ header#header
       margin-top: 0
 
   h1
-    a
-      font-family: $font-1
-      display: block
-      font-size: 0.6em
-      padding: 27px 15px
-      text-shadow: $text-shadow
+    font-family: $font-1
 
-      &:hover, &:visited, &:active
-        font-family: $font-1
-        color: $primary-light
+  h2
+    font-size: 0.6em
+    //
+    //&:hover, &:visited, &:active
+    //  font-family: $font-1
+    //  color: $primary-light
 
   a, a:hover, a:visited, a:active
     font-family: $font-2
     font-weight: 100
     color: $primary-dark
 
-  h2
-    font-size: 0.6em
 
   .current-menu-item > a
     background-color: $accent
@@ -54,7 +68,6 @@ header#header
     border-top: 1px solid $accent
     &:hover
       background-color: $accent
-
 
   img#navigation_button
     position: fixed
@@ -67,27 +80,47 @@ header#header
 
 .tablet, .desktop
   header#header
+    height: 80px
+    //overflow: hidden
     position: fixed
     width: 100%
     top: 0
     left: 0
 
-    h1, h2, nav
+    img#header_icon
+      width: auto !important
+      height: auto !important
+
+    img#header_icon, div#title, nav, a
+      vertical-align: top
       display: inline-block
 
+    div#title
+      padding: 0 25px 0 10px
+      height: 80px
+
+    a#title_link
+      &:hover
+        background-color: $secondary-1
+
+    h1
+      padding: 17px 0 0
+      font-size: 1.3em
+
     h2
-      padding: 33px 0
-      font-size: 0.8em
+      padding: 5px 0 0 2px
 
     nav
-      position: absolute
-      right: 0
-      top: 0
+      float:  right
 
     li
       display: inline-block
-      padding: 30px 30px
-      min-width: 100px
+      padding: 5px 30px
+      //min-width: 100px
       text-align: center
-      margin: 0 -4px
-      border-left: 1px solid rgba(120, 120, 120, 0.3)
+      margin: 25px 0
+      border: none
+      border-right: 1px solid rgba(120, 120, 120, 0.5)
+      &:last-child
+        border-right: none
+        padding-right: 0

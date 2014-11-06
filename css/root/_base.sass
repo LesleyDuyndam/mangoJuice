@@ -16,20 +16,40 @@
 
 .tablet
   &.portrait
-    body > section
+    body
+      padding-top: 100px
+    &> section
+      padding: 50px auto
       width: $width-tablet-portrait
 
 .tablet
   & .landscape
-    body > section
+    body
+      padding-top: 100px
+    &> section
+      padding: 50px auto
       width: $width-tablet-landscape
 
 .desktop
-  body > section,
-  footer > input
+  body
+    padding-top: 100px
+    &> section
+      padding-top: 250px
+
+      width: $width-desktop
+      min-width: $width-desktop-min
+      max-width: $width-desktop-max
+
+  header#header
+    h1
+      a
+        padding-left: 0
+
+
+  #header_wrapper
     width: $width-desktop
-    min-width: $width-desktop-min
-    max-width: $width-desktop-max
+    margin: 0 auto
+
 
 body,
 body > footer
