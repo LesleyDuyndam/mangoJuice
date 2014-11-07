@@ -17,29 +17,22 @@
     padding: 4%
 
 .tablet
-  &.portrait
-    body
-      padding-top: 100px
-    &> section
+  body
+    padding-top: 100px
+    & > section
       position: relative
       background-color: rgba(255,255,255,1)
-      padding: 50px auto
-      width: $width-tablet-portrait
-
-.tablet
-  & .landscape
-    body
-      padding-top: 100px
-    &> section
-      position: relative
-      background-color: rgba(255,255,255,1)
-      padding: 50px auto
-      width: $width-tablet-landscape
+      padding: 50px 10%
+      width: 80%
+      & > article,
+      & > footer,
+      & > aside
+        width: 100%
 
 .desktop
   body
     padding-top: 100px
-    &> section
+    & > section
       position: relative
       background-color: rgba(255,255,255,1)
       padding: 100px 15%
@@ -51,13 +44,16 @@
         padding-left: 0
 
 
+
   #header_wrapper
-    width: $width-desktop
-    margin: 0 auto
+    width: 70%
+
+    margin: 0 15%
 
 
 body,
 body > footer
+  position: relative
   background-color: $primary-light
 
 body > section > header,
@@ -67,9 +63,9 @@ body > section,
 body > footer
   margin: 0 auto
 
-body > section,
-body > footer
-  padding: 80px 0
+//body > section,
+//body > footer
+//  padding: 80px 0
 
 
 

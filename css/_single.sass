@@ -7,14 +7,9 @@
     z-index: -10
     background-size: cover
     background-position: 50%
-
-  .gradient
-    width: 100%
-    height: 100%
-    transition: 1s
-
   & > section
     padding-top:        0
+    margin-top:       500px
     letter-spacing:   0.04em
     line-height:      1.5em
 
@@ -27,15 +22,8 @@
       font-size: 2em
       line-height: 1.3em
 
-    & > header,
-    & > footer,
-    & > aside
-      background-color: $primary-light
-
-
     & > header
       margin: 300px 0 0
-      box-shadow: $background
 
       ul
         padding: 0 20px
@@ -56,10 +44,8 @@
         margin:         0 10px 0 0
 
 
-
-
     & > article
-      margin:           0
+      margin:           70px 0 0 !important
       padding:          50px 0
       background-color: rgba(255, 255, 255, 1)
 
@@ -107,30 +93,34 @@
   .single-post
     #img-header
       height: 800px
-    h3
-      font-size: 3em
 
     & > section
-      p, h1, h2
-        padding:          78px 80px
-      h3, h4, h5, h6
-        padding:          75px 80px 0
-      h3
-        line-height: 1.3em
-        font-size: 6.5em
-      ul
-        padding: 50px 82px 150px
+      & article
+        p, h1, h2
+          padding:          78px 80px
+        h3, h4, h5, h6
+          padding:          75px 80px 0
+        h3
+          line-height: 1.3em
+          font-size: 3.5em
+        ul
+          padding: 50px 82px 150px
 
 
       #disqus_thread
         padding: 75px 0
 
       & > header
+        margin-top: 0
+
         a, time
           font-size: 1.1em
 
         img
           width: 20px
+
+        h3, ul
+          padding: 20px 0
 
       & > article,
       & > footer
@@ -156,33 +146,3 @@
           font-size:      2em
           background-size: 30px auto
           background-position: 80px 50%
-
-
-
-.desktop
-  .single-post
-    & > section
-      h3
-        font-size: 6.5em
-
-      & > article,
-      & > footer,
-      & > aside
-        width: 75%
-
-      & > aside
-        ul
-          li
-            .card
-              width: 100%
-              box-shadow: none
-              margin-bottom: 50px
-
-              p
-                padding: 10px 0
-
-              a
-                padding: 10px 0
-
-              h4
-                padding: 50px 10px

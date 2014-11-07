@@ -33,7 +33,7 @@ jQuery( function(){
      *
      */
 
-    if( device.mobile() ) {
+    if( device.mobile() || device.tablet() ) {
 
 
         // Add the img#navigation_button to the header navigation

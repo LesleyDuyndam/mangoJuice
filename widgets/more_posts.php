@@ -39,24 +39,25 @@ class mangoJuice_more_posts_Widget extends WP_Widget {
         //  Get the posts Query
         $my_query = new WP_Query( 'category_name=' . $mangoJuice_article['category']->slug );
 
-        echo "<li><header>";
+        echo "<li class='card'><header>";
         echo "<h3>" . $args['title'] . "</h3>";
         echo "<a href='" . esc_url(get_category_link(get_cat_ID( $mangoJuice_article['category']->slug ))) . "' class='more'> MEER </a>";
         echo "</header>";
-            echo "<ul class='card-mini'>";
 
-            //  Loop trough the post query
-            while ( $my_query->have_posts() ) : $my_query->the_post();
 
-                if( get_the_ID() != $mangoJuice_article['id'] ){
+        //  Get the posts Query
+        $my_query = new WP_Query( 'category_name=portfolio&posts_per_page=3' );
+        $count = 0;
 
-                    //  Print the post data in the preset format
-                    get_template_part( 'modules/module', 'card_mini');
+        //  Loop trough the post query
+        while ( $my_query->have_posts() ) : $my_query->the_post();
 
-                }
-            endwhile;
+            //  Print the post data in the preset format
+            get_template_part( 'modules/module', 'card');
 
-            echo "</ul>";
+        endwhile;
+
+
         echo "</li>";
 
         // outputs the content of the widget

@@ -1,43 +1,71 @@
 .card
-  display: inline-block
-  background-color: $primary-light
-  margin: ( $padding-mobile-vertical / 4 ) 2.5%
-  border-radius: $border-radius
-  overflow: hidden
-  box-shadow: $background
-  width: 95%
-  header
-    background-size: 100% auto
+  & > header
+    margin-bottom: 30px
+
+  & > a
+    display: inline-block
+    width:    22%
+    height:   130px
+    padding: 70px 4% 0
     background-position: 50% 50%
+    background-size: cover
     text-align: center
-    @include transition( 0.1s ease-in-out )
 
-  h4
-    background-color: rgba(0, 0, 0, 0.4)
-    display: block
-    padding: 100px 30px
-    font-size: 1.5em
-    color: $primary-light
-    text-shadow: $text-shadow
-    @include transition( 0.1s ease-in-out )
+    &:hover
+      background-size: 150%
+      //background: rgba(100, 100, 100, 0.5)
+  .middle
+    margin: 50px 5%
+  .side
+    margin: 50px 0
 
-  &:hover
-    header
-      background-size: 150% auto
-
-    h4
-      background-color: rgba(0, 0, 0, 0.7)
-
-  p
-    padding: $padding-mobile-vertical $padding-mobile
-    display: inline-block
-
-  a
-    padding: 0 $padding-mobile ( 2 * $padding-mobile-vertical)
-    display: inline-block
-
-
-.desktop
-
+.tablet
   .card
-    width: 30%
+    & > a
+      width: 26%
+      height: 140px
+      padding: 30px 2% 0
+
+//.card
+//  display: inline-block
+//  background-color: $primary-light
+//  margin: ( $padding-mobile-vertical / 4 ) 2.5%
+//  border-radius: $border-radius
+//  overflow: hidden
+//  box-shadow: $background
+//  width: 95%
+//  header
+//    background-size: 100% auto
+//    background-position: 50% 50%
+//    text-align: center
+//    @include transition( 0.1s ease-in-out )
+//
+//  h4
+//    background-color: rgba(0, 0, 0, 0.4)
+//    display: block
+//    padding: 100px 30px
+//    font-size: 1.5em
+//    color: $primary-light
+//    text-shadow: $text-shadow
+//    @include transition( 0.1s ease-in-out )
+//
+//  &:hover
+//    header
+//      background-size: 150% auto
+//
+//    h4
+//      background-color: rgba(0, 0, 0, 0.7)
+//
+//  p
+//    padding: $padding-mobile-vertical $padding-mobile
+//    display: inline-block
+//
+//  a
+//    padding: 0 $padding-mobile ( 2 * $padding-mobile-vertical)
+//    display: inline-block
+//
+//
+//.desktop
+//
+//  .card
+//    width: 30%
