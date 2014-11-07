@@ -16,6 +16,9 @@
 <section id="intro">
     <?php get_template_part( 'modules/module', 'intro') ;?>
 </section>
+<div id="intro-text-container">
+    <blockquote id="intro-text">" Webdesign met eenvoud en gebruiksvriendelijkheid als belangrijkste uitganspunt "</blockquote>
+</div>
 
 <section id="portfolio">
     <header>

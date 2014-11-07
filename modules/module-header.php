@@ -49,7 +49,7 @@
                     <h2><?php bloginfo('description'); ?></h2>
                 </div>
             </a>
-            <nav role="navigation">
+            <nav id="main_nav" role="navigation">
                 <!-- START MAIN NAVIGATION -->
                 <?php
 

@@ -1,40 +1,10 @@
-.mobile
-  header#header
-    position: fixed
-    top: 0
-    width: 100%
-    height: auto
-    min-height: 75px
-    z-index: 100
-
-    a
-      display: block
-      width: 100%
-      height: 100%
-      padding: 15px 10%
-      &:hover, &:visited
-        color: $primary-light
-
-  div#title
-    display: inline-block
-
-  h1
-    font-size: 1.2em
-    padding: 16px 12px 0
-
-  h2
-    font-size: 1.1em
-    padding: 5px 12px 0
-
-  a#title_link
-    padding: 0 !important
-
-  img#header_icon
-    width: auto !important
-    height: 75px !important
-
-
 header#header
+  position: fixed
+  top: 0
+  width: 100%
+  height: auto
+  min-height: 75px
+  z-index: 100
   background-color: $primary-light
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3)
   &.closed
@@ -47,13 +17,12 @@ header#header
 
   h1
     font-family: $font-1
+    font-size: 1.2em
+    padding: 16px 12px 0
 
   h2
-    font-size: 0.6em
-    //
-    //&:hover, &:visited, &:active
-    //  font-family: $font-1
-    //  color: $primary-light
+    font-size: 0.8em
+    padding: 5px 12px 0
 
   a, a:hover, a:visited, a:active
     font-family: $font-2
@@ -62,12 +31,7 @@ header#header
 
 
   .current-menu-item > a
-    background-color: $accent
-
-  li
-    border-top: 1px solid $accent
-    &:hover
-      background-color: $accent
+    text-decoration: underline
 
   img#navigation_button
     position: fixed
@@ -77,6 +41,34 @@ header#header
     height: 35px
     border: none
     cursor: pointer
+
+  div#title
+    display: inline-block
+
+  a#title_link
+    padding: 0 !important
+
+  nav
+    a
+      display: block
+      width: 100%
+      height: 100%
+      padding: 15px 0 15px 85px
+
+
+header#header
+  img#header_icon
+    width: 75px !important
+    height: 75px !important
+
+//.mobile
+//  nav
+//    a
+//      display: block
+//      width: 100%
+//      height: 100%
+//      padding: 15px 0 15px 85px
+
 
 .tablet, .desktop
   header#header
@@ -112,6 +104,11 @@ header#header
 
     nav
       float:  right
+      a
+        display: inline-block
+        width: auto !important
+        height: auto !important
+        padding: 0
 
     li
       display: inline-block
@@ -124,3 +121,6 @@ header#header
       &:last-child
         border-right: none
         padding-right: 0
+
+    #header_wrapper
+      height: 80px
